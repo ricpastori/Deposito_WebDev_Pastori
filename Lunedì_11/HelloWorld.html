@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!--
+    Il tag div è un contenitore generico usato per raggruppare altri
+    elementi senza significato semantico.
+    Il div esterno serve solo ad organizzare il layout ed è solamente un div semantico.
+  -->
+  <div>
+    <!-- 
+      Il div interno è usato in modo strutturale per stilizzare un blocco di contenuto.
+      L'attributo style è usato per applicare stili CSS direttamente all'elemento.
+    -->
+    <div style="background-color: lightgray;">
+      <!-- Intestazione di primo livello -->
+      <h1>Titolo pagina</h1>
+      <!-- Intestazione di secondo livello -->
+      <h2>Sottotitolo</h2>
+    </div>
+  </div>
+  <!-- Il paragrafo è un elemento blocco (block) autonomo di testo -->
+  <p>Questo è un paragrafo di testo.</p>
+  <!-- tag per sottoporzioni di testo che rende il testo in grassetto -->
+  <p>Questo è un <strong>testo importante</strong></p>
+  <!-- tag per sottoporzioni di testo che rende il testo in corsivo -->
+  <p>Questo è un <em>testo enfatizzato</em></p>
+  <!--
+    Tag per creare un link ipertestuale.
+    L'attributo href specifica l'URL di destinazione del link.
+   -->
+  <a href="https://www.google.com"
+    style="display:flex;
+          flex-direction: column;
+          border:solid 1px black;
+          align-items:center;
+          width:fit-content;">
+     <!--
+      Qusto tag è usato per inserire un'immagine.
+      L'attributo src specifica il percorso dell'immagine.
+      Il path può essere relativo (rispetto alla posizione del file HTML) o assoluto (URL completo).
+      L'attributo alt fornisce un testo alternativo che viene mostrato se l'immagine non può
+      essere caricata.
+    -->
+    <img src="google_logo.webp" alt="Logo di Google" width="100">
+    Visita Google
+</a>
+  <!-- Questo contenuto è invisibile 
+  <h3>Titolo paragrafo</h3>
+  <p>Contenuto nascosto</p>
+  -->
+  <div>
+    <div style="background-color: bisque;">
+      <!--
+        Tag per inserire un video.
+        Possono esserci più tag source per supportare diversi formati video.
+      -->
+      <video controls width="320"
+        style="display:block;
+              margin: 20px 0;">
+        <source src="royalty_free_scenic_autumn_foliage_stock_video_footage.mp4" type="video/mp4">
+      </video>
+      <!--
+        Tag per inserire un audio.
+        Possono esserci più tag source per supportare diversi formati audio.
+      -->
+      <audio controls width="320"
+        style="display:block;
+              margin: 20px 0;">
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+  </div>
+
+  <!-- Tag per creare una lista non ordinata -->
+  <ul>
+    <li>Questo è un elemento della lista</li>
+    <li>Questo è un altro elemento della lista</li>
+    <!-- Il tag span è un elemento inline usato per raggruppare parti di testo o altri elementi. -->
+    <li>Questo terzo elemento contiene un <span style="color:red;">elemento inline</span></li>
+  </ul>
+
+  <!-- Tag per creare una lista ordinata -->
+  <ol>
+    <li>Primo elemento ordinato</li>
+    <li>Secondo elemento ordinato</li>
+    <li>Terzo elemento ordinato</li>
+  </ol>
+
+  <!--
+    L'attributo id è usato per identificare univocamente un elemento nella pagina
+    ed ha specificità più alta rispetto alla classe.
+    Può essere usato per applicare stili CSS o per selezionare l'elemento con JavaScript.
+    Non possono esserci più elementi con lo stesso id in una pagina.
+    L'attributo class è usato per assegnare uno o più nomi di classe a un elemento,
+    che possono essere usati per applicare stili CSS o per selezionare l'elemento con JavaScript.
+    Possono esserci più elementi con la stessa classe in una pagina.
+    L'attributo title fornisce informazioni aggiuntive sull'elemento,
+    che vengono visualizzate come tooltip quando l'utente passa il mouse sopra l'elemento.
+  -->
+  <div id="first-form-container" class="form-container" title="Form di esempio">
+    <!--
+      Il tag form è usato per creare un modulo che consente agli utenti di inviare dati al server.
+      L'attributo action specifica l'URL a cui inviare i dati del modulo quando viene inviato.
+      L'attributo method specifica il metodo HTTP da utilizzare (GET o POST).
+    -->
+    <form action="/submit" method="POST">
+      <!--
+        Tag per creare una label.
+        L'elemento label è usato per definire una etichetta per un elemento di input.
+        L'attributo for associa la label al campo di input con l'id corrispondente.
+      -->
+      <label for="username">Username:</label>
+      <!--
+        Tag per creare un campo di input di testo.
+        L'attributo type specifica il tipo di input (in questo caso, testo).
+        L'attributo id è usato per identificare univocamente l'elemento e associarlo alla label.
+        L'attributo name è usato per identificare i dati inviati al server quando il form viene inviato.
+        L'attributo placeholder fornisce un testo segnaposto che viene mostrato quando il campo è vuoto.
+        L'attributo required indica che il campo è obbligatorio e deve essere compilato
+        prima di inviare il modulo.
+      -->
+      <input type="text" id="username" name="username" placeholder="Il tuo username" required><br>
+
+      <!--
+        Tag per creare un campo di input di password
+        I campi di input di tipo password nascondono i caratteri inseriti, mostrando invece
+        dei puntini o asterischi.
+      -->
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="La tua password" required><br>
+
+      <!--
+        Tag per creare un campo di input di number
+        I campi di input di tipo number consentono agli utenti di inserire solo numeri.
+       -->
+      <label for="age">Età:</label>
+      <input type="number" id="age" name="age" placeholder="La tua età"><br>
+
+      <!--
+        Tag per creare un campo di input di tipo email
+        I campi di input di tipo email consentono agli utenti di inserire solo indirizzi email validi.
+      -->
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="La tua email" required><br>
+
+      <!--
+        Tag per creare un campo di input di tipo radio.
+        I campi radio con lo stesso nome (name) sono raggruppati insieme,
+        consentendo all'utente di selezionare solo una opzione.
+        L'attributo value specifica il valore che viene inviato al server quando l'opzione è selezionata.
+      -->
+      <label>Genere:</label>
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">Maschio</label>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Femmina</label><br>
+
+      <!--
+        Tag per creare un campo di input di tipo select (menu a tendina).
+        I tag option rappresentano le opzioni disponibili nel menu a tendina.
+        L'attributo value specifica il valore che viene inviato al server quando l'opzione è selezionata.
+      -->
+      <label for="country">Paese:</label>
+      <select id="country" name="country">
+        <option value="italy">Italia</option>
+        <option value="usa">USA</option>
+        <option value="uk">Regno Unito</option>
+      </select><br>
+
+      <!--
+        Tag per creare un campo di input di tipo textarea (area di testo).
+        La textarea consente agli utenti di inserire testo su più righe.
+      -->
+      <label for="message">Messaggio:</label><br>
+      <textarea id="message" name="message" placeholder="Il tuo messaggio"></textarea><br>
+
+      <!--
+        Tag per creare un campo di input di tipo checkbox.
+        I campi di input di tipo checkbox consentono agli utenti di selezionare una o più opzioni.
+         L'attributo value specifica il valore che viene inviato al server quando la casella è selezionata.
+      -->
+      <input type="checkbox" id="subscribe" value="subscribed">
+      <label for="subscribe">Iscriviti alla newsletter!</label><br>
+
+      <!--
+        Tag per creare un bottone.
+        Il tipo submit indica che il bottone invia i dati del modulo al server quando viene cliccato.
+      -->
+      <button type="submit">Invia</button>
+    </form>
+  </div>
+</body>
+</html>
