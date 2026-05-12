@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pagina di registrazione e gestione evento tecnologico">
+    <title>Registrazione Evento Tecnologico</title>
+    <style>
+      *, body {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      h2 {
+        margin: 32px 0 16px;
+      }
+
+      header {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content:space-between;
+        align-items: center;
+        padding: 8px 24px;
+        width: 100dvw;
+      }
+
+      main {
+        margin: 0 auto;
+        padding: 20px;
+        max-width: 760px;
+      }
+
+      label {
+        display: inline-block;
+        margin: 16px 0 4px;
+        font-weight: bold;
+        font-size: 0.875rem;
+      }
+
+      span {
+        color: red;
+        font-weight: bold;
+      }
+
+      li:first-child span{
+        color: blue;
+      }
+
+      li:last-child span {
+        color: green;
+      }
+
+      .label {
+        margin: 16px 0 4px;
+        font-weight: bold;
+        font-size: 0.875rem;
+      }
+
+      .box-label {
+        margin: 0;
+        font-weight: normal;
+        font-size: 0,75rem
+      }
+
+      .flex-row {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: 20px;
+      }
+
+      button {
+        margin-top: 16px;}
+    </style>
+  </head>
+  <body>
+    <!-- Header principale con logo e menu di navigazione -->
+    <header>
+      <div>
+        <a href="./Esercizio.html" class="flex-row" style="gap: 40px;">
+          <img src="../../assets/img/eventscase-logo.webp" alt="Logo dell'evento" height="64">
+          <h1>Evento Tech 2026</h1>
+        </a>
+      </div>
+      <nav>
+        <ul class="flex-row" style="list-style-type:none;">
+          <li><a href="../Mattina/Esercizio.html">Esercizio mattina</a></li>
+          <li><a href="../Mattina/Esempio.html">Esempio mattina</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Presentazione dell'evento -->
+      <section>
+        <article>
+          <h2>Benvenuti alla registrazione dell'evento tecnologico</h2>
+          <p>Unisciti a noi per due giorni di talk, workshop e networking con esperti di sviluppo software, UX design e SEO.</p>
+        </article>
+      </section>
+
+      <!-- Relatori con elenco semantico -->
+      <section>
+        <h2>Relatori</h2>
+        <div>
+          <p>Ecco alcuni speaker in programma:</p>
+          <ul>
+            <li><span>Relatore 1:</span> Esperto in Web Development</li>
+            <li><span>Relatore 2:</span> Specialista in UX/UI Design</li>
+            <li><span>Relatore 3:</span> Consulente SEO</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Programma dell'evento in tabella -->
+      <section>
+        <h2>Programma dell'evento</h2>
+        <table border="1">
+          <caption>Dettaglio del programma</caption>
+          <thead>
+            <tr>
+              <th>Giorno</th>
+              <th>Orario</th>
+              <th>Attività</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Giovedì 15</td>
+              <td>09:00 - 10:30</td>
+              <td>Registrazione e benvenuto</td>
+            </tr>
+            <tr>
+              <td>Giovedì 15</td>
+              <td>11:00 - 12:30</td>
+              <td>Talk: Sviluppo Web moderno</td>
+            </tr>
+            <tr>
+              <td>Venerdì 16</td>
+              <td>09:00 - 10:30</td>
+              <td>Workshop UX/UI</td>
+            </tr>
+            <tr>
+              <td>Venerdì 16</td>
+              <td>11:00 - 12:30</td>
+              <td>Sessione Q&A e networking</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Sezione multimediale con video -->
+      <section>
+        <h2>Video introduttivo</h2>
+        <div>
+          <video controls width="640">
+            <source src="../../assets/video/royalty_free_autumn_footage.mp4" type="video/mp4">
+            Il tuo browser non supporta il video.
+          </video>
+        </div>
+      </section>
+
+      <!-- Modulo di iscrizione completo -->
+      <section>
+        <h2>Modulo di iscrizione</h2>
+        <form action="#" method="post">
+          <div>
+            <label for="name">Inserisci il tuo nome completo:</label><br>
+            <input type="text" id="name" name="name" placeholder="Mario Rossi" required>
+          </div>
+
+          <div>
+            <label for="email">Inserisci la tua email:</label><br>
+            <input type="email" id="email" name="email" placeholder="nome@esempio.com" required>
+          </div>
+
+          <div>
+            <label for="password">Crea una password:</label><br>
+            <input type="password" id="password" name="password" placeholder="************" required>
+          </div>
+
+          <div>
+            <p class="label">Modalità di partecipazione:</p>
+            <input type="radio" id="in-presenza" name="partecipazione" value="in-presenza" required>
+            <label for="in-presenza" class="box-label">In presenza</label><br>
+            <input type="radio" id="online" name="partecipazione" value="online">
+            <label for="online" class="box-label">Online</label>
+          </div>
+
+          <div>
+            <p class="label">Preferenze sessione:</p>
+            <input type="checkbox" id="workshop" name="preferenze" value="workshop">
+            <label for="workshop" class="box-label">Workshop</label><br>
+            <input type="checkbox" id="talk" name="preferenze" value="talk">
+            <label for="talk" class="box-label">Talk</label><br>
+            <input type="checkbox" id="networking" name="preferenze" value="networking">
+            <label for="networking" class="box-label">Networking</label>
+          </div>
+
+          <div>
+            <label for="ticket">Tipo di ticket:</label><br>
+            <select id="ticket" name="ticket" required>
+              <option value="">Seleziona un'opzione</option>
+              <option value="standard">Standard</option>
+              <option value="premium">Premium</option>
+              <option value="vip">VIP</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="note">Note aggiuntive:</label><br>
+            <textarea id="note" name="note" rows="4" cols="70" placeholder="Scrivi qui eventuali richieste"></textarea>
+          </div>
+
+          <div>
+            <button type="submit">Invia iscrizione</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer con informazioni di contatto -->
+    <footer>
+      <p>Contattaci: <a href="mailto:info@evento-tech.it">info@evento-tech.it</a></p>
+      <p>© 2026 Evento Tech</p>
+    </footer>
+  </body>
+</html>
