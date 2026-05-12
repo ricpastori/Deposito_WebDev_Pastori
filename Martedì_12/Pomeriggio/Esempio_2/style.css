@@ -1,0 +1,25 @@
+/*
+ Specificità CSS:
+ - Più specifico significa maggiore priorità per l'applicazione dello stile
+ - I selettori base vengono valutati in questo ordine di specificità:
+   1) ID (#id)
+   2) Classe, pseudo-classe, attributo (.classe, :hover, [type="text"])
+   3) Tipo/elemento (div, p, h1)
+   4) Selettori universali e combinatori (*, +, >, ~) hanno bassa specificità
+*/
+
+p {
+	color: darkblue;
+}
+
+a:hover {
+	color: red;
+}
+
+h1 {
+	font-size: 32px;
+}
+
+div {
+	background-color: aliceblue;
+}
