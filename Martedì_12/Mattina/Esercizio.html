@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <!-- Sezione metadati della pagina: codifica e viewport per la visualizzazione corretta. -->
+  <!-- 
+    Il tag meta con charset specifica la codifica dei caratteri usata nella pagina.
+    UTF-8 è una codifica universale che supporta la maggior parte dei caratteri di tutte le lingue.
+  -->
+  <meta charset="UTF-8">
+  <!--
+    Il tag meta con viewport è usato per controllare il layout su dispositivi mobili,
+    assicurando che la pagina sia visualizzata correttamente su schermi di diverse dimensioni.
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esercizio_Registrazione</title>
+  <style>
+    input, select, textarea {
+      margin-bottom: 16px;
+    }
+
+    /*
+      Gli elementi con display: inline-block vengono visualizzati come elementi in linea, ma possono avere larghezza e altezza specificate.
+    */
+    label {
+      display: inline-block;
+      margin-bottom: 4px;
+    }
+
+    div {
+      margin: 0 auto 40px;
+      width: fit-content;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <!-- Titolo principale e messaggio di benvenuto. -->
+    <div>
+      <h1>Registrazione</h1>
+      <p>Benvenuto nella pagina di registrazione!</p>
+    </div>
+    <div>
+    <!-- Messaggio introduttivo con istruzioni e campi obbligatori. -->
+      <p>Per favore, compila il modulo sottostante per creare un nuovo account.</p>
+      <p>I campi contrassegnati con un <em>asterisco (*)</em> sono obbligatori.</p>
+    </div>
+    <div>
+      <!-- Form di registrazione con tutti i campi utente. -->
+      <form action="#" method="post">
+        <!--
+          Il tag <sup> è usato per indicare un testo in apice, spesso utilizzato per note o simboli.
+          -->
+        <label for="username"><strong>Creare un username:</strong><sup>*</sup></label>
+        <input type="text" id="username" name="username" placeholder="Pippo"><br>
+
+        <label for="email"><strong>Inserisci la tua email:</strong><sup>*</sup></label>
+        <input type="email" id="email" name="email" placeholder="pippo@example.com" required><br>
+
+        <label for="password"><strong>Crea una password:</strong><sup>*</sup></label>
+        <input type="password" id="password" name="password" required><br>
+
+        <label for="confirm_password"><strong>Conferma la password:</strong><sup>*</sup></label>
+        <input type="password" id="confirm_password" name="confirm_password" required><br>
+
+        <label for="age"><strong>Età:</strong></label>
+        <!--
+          L'attributo min specifica il valore minimo accettabile per un campo di input di tipo number.
+        -->
+        <input type="number" id="age" name="age" min="0" placeholder="18"><br>
+
+        <label><strong>Genere:</strong></label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Maschio</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Femmina</label><br>
+
+        <!-- Selezione del paese di provenienza. -->
+        <label for="country"><strong>Paese:</strong></label>
+        <select id="country" name="country">
+          <option value="france">Francia</option>
+          <option value="germany">Germania</option>
+          <option value="italy">Italia</option>
+          <option value="usa">USA</option>
+          <option value="uk">Regno Unito</option>
+        </select><br>
+
+        <label for="message"><strong>Cosa dovremmo sapere di più su di te?</strong></label><br>
+        <!--
+          L'attributo rows specifica il numero di righe visibili in una textarea, mentre cols specifica il numero di caratteri visibili per riga.
+        -->
+        <textarea id="message" name="message" rows="4" cols="70" placeholder="Quali bisogni o difficoltà sono importanti per te?"></textarea><br>
+
+        <input type="checkbox" id="subscribe" value="subscribed">
+        <!--
+          L'attributo target="_blank" nel tag <a> indica che il link deve essere aperto in una nuova scheda o finestra del browser.
+        -->
+        <label for="subscribe">Conferma la lettura dei <a href="#" target="_blank">termini e delle condizioni</a></label><br>
+
+        <input type="submit" value="Registrati">
+
+      </form>
+    </div>
+  </div>
+</body>
+</html>
