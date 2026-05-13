@@ -1,0 +1,127 @@
+body {
+	/* Attiva CSS Grid per organizzare le aree principali della pagina. */
+	display: grid;
+	/* Crea una colonna stretta per la sidebar e una più larga per il contenuto. */
+	grid-template-columns: 1fr 4fr;
+	/* Disegna la struttura della pagina usando nomi di area leggibili. */
+	grid-template-areas:
+		"header header"
+		"sidebar main"
+		"footer footer";
+	gap: 24px;
+	height: 100dvh;
+	font-family: Arial, sans-serif;
+}
+
+#site-header {
+	/* Attiva Flexbox per mettere titolo e menu sulla stessa riga. */
+	display: flex;
+	position: relative;
+	/* Collega l'header all'area chiamata "header" nella griglia. */
+	grid-area: header;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #333;
+	padding: 12px 24px;
+
+	/* Il nesting permette di scrivere selettori interni al blocco principale. */
+	/* In questo caso & h1 seleziona gli h1 dentro #site-header. */
+	& h1 {
+		margin: 0;
+		color: white;
+	}
+}
+
+.site-menu ul {
+	/* Dispone gli elementi del menu in orizzontale. */
+	display: flex;
+	flex-flow: row nowrap;
+	gap: 16px;
+}
+
+.site-menu a {
+	color: lightgray;
+}
+
+.site-menu a:hover {
+	color: white;
+}
+
+#sidebar {
+	/* Collega la sidebar all'area chiamata "sidebar" nella griglia. */
+	grid-area: sidebar;
+	background-color: #f4f4f4;
+	padding: 24px;
+
+	& ul {
+		/* Mostra i link della sidebar come lista puntata. */
+		list-style-type: disc;
+	}
+}
+
+#main-content {
+	/* Collega il contenuto principale all'area chiamata "main" nella griglia. */
+	grid-area: main;
+	padding: 24px;
+}
+
+.divider {
+	/* Crea un riferimento per posizionare il simbolo decorativo al suo interno. */
+	position: relative;
+	width: 100%;
+	height: 12px;
+
+	& .greca {
+		/* Posiziona il simbolo al centro del divisore. */
+		position: absolute;
+		top: -50%;
+		left: 50%;
+		transform: translateX(-50%);
+		color: #333;
+	}
+}
+
+#related-articles {
+	/* Separa gli articoli collegati dal contenuto precedente. */
+	margin-top: 64px;
+
+	& div {
+		/* Organizza gli articoli collegati su più righe se lo spazio non basta. */
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		gap: 24px;
+
+		& article {
+			/* Ogni articolo diventa una card flessibile con immagine e testo in colonna. */
+			display: flex;
+			flex: 1 1 200px;
+			flex-flow: column nowrap;
+			align-items: center;
+			gap: 12px;
+
+			& img {
+				/* Fa adattare l'immagine alla larghezza della card. */
+				border-radius: 8px;
+				width: 100%;
+				height: auto;
+				object-fit: cover;
+			}
+		}
+	}
+}
+
+#site-footer {
+	/* Collega il footer all'area chiamata "footer" nella griglia. */
+	grid-area: footer;
+	background-color: #333;
+	padding: 24px;
+
+	& p {
+		/* Centra il testo del copyright dentro il footer. */
+		margin: 0;
+		color: white;
+		text-align: center;
+	}
+}

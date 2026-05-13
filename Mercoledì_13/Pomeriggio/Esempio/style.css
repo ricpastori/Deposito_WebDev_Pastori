@@ -1,0 +1,195 @@
+*,
+body {
+	/* Reset base: elimina margini e padding predefiniti. */
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+
+body {
+	/* Aggiunge un po' di spazio intorno al contenuto della pagina. */
+	padding: 40px;
+}
+
+main {
+	margin: 0 auto;
+	/* Limita la larghezza del contenuto e lo centra. */
+	max-width: 960px;
+}
+
+div {
+	/* Include bordo e padding nelle dimensioni totali del div. */
+	box-sizing: border-box;
+	border: solid black 1px;
+	padding: 24px;
+	width: 240px;
+	height: 120px;
+}
+
+section {
+	/* Separa visivamente una sezione dalla successiva. */
+	margin: 64px 0;
+}
+
+h1 {
+	/* Aggiunge spazio sotto il titolo principale. */
+	margin-bottom: 24px;
+}
+
+h2 {
+	/* Aggiunge spazio sotto i titoli delle sezioni. */
+	margin-bottom: 12px;
+}
+
+.position-container {
+	/* Riferimento per il figlio posizionato in absolute. */
+	position: relative;
+	/* Centra il contenitore nella pagina. */
+	margin: 0 auto;
+	background-color: aliceblue;
+	padding: 40px;
+	width: 360px;
+	height: 240px;
+}
+
+.position-box {
+	/* Posiziona il box rispetto al contenitore. */
+	position: absolute;
+	/* Porta l'angolo del box al centro. */
+	top: 50%;
+	left: 50%;
+	/* Centra davvero il box rispetto al suo centro. */
+	transform: translate(-50%, -50%);
+	background-color: lightcoral;
+}
+
+.flex-container {
+	/* Attiva Flexbox sui figli diretti. */
+	display: flex;
+	/* Allinea gli elementi all'inizio dell'asse principale. */
+	justify-content: start;
+	/* Centra gli elementi sull'asse verticale. */
+	align-items: center;
+	gap: 40px;
+	background-color: lightgreen;
+	padding: 40px;
+	width: 100%;
+}
+
+.flex-item {
+	/* Elemento interno gestito dal contenitore flex. */
+	background-color: lightseagreen;
+	padding: 20px;
+	width: 160px;
+	height: 80px;
+}
+
+.flex-item:nth-child(2) {
+	/* Il secondo elemento usa Flexbox anche al suo interno. */
+	display: flex;
+	justify-content: end;
+	align-items: end;
+	background-color: lightskyblue;
+}
+
+.flex-item:last-child {
+	/* Il terzo elemento cambia allineamento rispetto agli altri. */
+	align-self: end;
+	justify-self: end;
+	background-color: lightsalmon;
+}
+
+.grid-base-container {
+	/* Attiva CSS Grid sui figli diretti. */
+	display: grid;
+	/* Crea 3 colonne della stessa larghezza. */
+	/* repeat(numero, misura) ripete la stessa misura più volte. */
+	grid-template-columns: repeat(3, 1fr);
+	gap: 24px;
+	background-color: lightyellow;
+	padding: 40px;
+	width: 100%;
+	height: fit-content;
+}
+
+.grid-base-item {
+	/* Elemento interno della griglia base. */
+	background-color: lightsteelblue;
+	width: 100%;
+}
+
+.grid-advanced-container {
+	/* Crea una griglia con  3 colonne e 2 righe, tutte con dimensioni fisse. */
+	display: grid;
+	grid-template-rows: repeat(2, 160px);
+	grid-template-columns: repeat(3, 160px);
+	gap: 24px;
+	background-color: lightyellow;
+	padding: 40px;
+	width: fit-content;
+	height: fit-content;
+}
+
+.grid-advanced-item {
+	/* Occupa tutta la cella assegnata dalla griglia. */
+	background-color: lightsteelblue;
+	width: 100%;
+	height: 100%;
+}
+
+.grid-advanced-item:first-child {
+	/* I numeri indicano gli assi della griglia, non il numero di righe o colonne. */
+	/* Il primo elemento parte dal primo asse orizzontale fino al successivo, e va dall'asse verticale 1 al 3. */
+	grid-row: 1;
+	grid-column: 1 / 3;
+}
+
+.grid-advanced-item:nth-child(2) {
+	/* Il secondo elemento va dal primo asse orizzontale al terzo, e parte dall'asse verticale 3 fino al successivo. */
+	grid-row: 1 / 3;
+	grid-column: 3;
+}
+
+.grid-area-container {
+	/* Crea una griglia usando aree con nomi leggibili. */
+	display: grid;
+	/* Prima colonna stretta, seconda colonna più larga. */
+	grid-template-columns: 1fr 2fr;
+	/* Disegna la struttura della pagina con nomi di area. */
+	grid-template-areas:
+		"header header"
+		"sidebar content"
+		"footer footer";
+	gap: 24px;
+	background-color: lightyellow;
+	padding: 24px;
+	width: 100%;
+	height: fit-content;
+}
+
+.grid-area-container > div {
+	/* Gli elementi riempiono l'area della griglia assegnata. */
+	width: 100%;
+	height: 100%;
+}
+
+.header {
+	/* Collega questo elemento all'area chiamata "header". */
+	grid-area: header;
+	background-color: red;
+}
+.sidebar {
+	/* Collega questo elemento all'area chiamata "sidebar". */
+	grid-area: sidebar;
+	background-color: blue;
+}
+.content {
+	/* Collega questo elemento all'area chiamata "content". */
+	grid-area: content;
+	background-color: green;
+}
+.footer {
+	/* Collega questo elemento all'area chiamata "footer". */
+	grid-area: footer;
+	background-color: orange;
+}

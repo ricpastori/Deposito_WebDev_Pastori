@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<!-- HEAD: contiene metadati, link al CSS e titolo della pagina -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Esempio di pagina HTML per il pomeriggio del giorno 3">
+  <meta name="author" content="Riccardo Pastori">
+
+  <!-- Link al foglio di stile CSS: collega style.css per applicare gli stili -->
+  <link rel="stylesheet" href="style.css">
+  <title>Esempio pomeriggio - Giorno 3</title>
+</head>
+<body>
+  <!-- Contenuto principale dell'esempio. -->
+  <main>
+    <!-- Introduzione della pagina. -->
+    <h1>Esempio pomeriggio - Giorno 3</h1>
+    <p>Questo è un esempio di pagina HTML per il pomeriggio del giorno 3.</p>
+
+    <!--
+      SEZIONE POSITION:
+      mostra un esempio di posizionamento tramite classi dedicate.
+      "position-container" è il contenitore di riferimento.
+      "position-box" è l'elemento posizionato al suo interno.
+    -->
+    <section id="position-test">
+      <h2>Test di posizionamento</h2>
+      <div class="position-container">
+        <div class="position-box">Contenuto del box</div>
+      </div>
+    </section>
+
+    <!--
+      SEZIONE FLEXBOX:
+      mostra un contenitore flex e i suoi elementi interni.
+      "flex-container" gestisce la disposizione degli elementi.
+      "flex-item" identifica ogni singolo elemento del layout flex.
+    -->
+    <section id="flex-test">
+      <h2>Test di flexbox</h2>
+      <div class="flex-container">
+        <div class="flex-item">Elemento 1</div>
+        <div class="flex-item">Elemento 2</div>
+        <div class="flex-item">Elemento 3</div>
+      </div>
+    </section>
+
+    <!--
+      SEZIONE GRID BASE:
+      mostra una griglia semplice con una sola riga divisa per tre colonne.
+      "grid-base-container" definisce la struttura della griglia.
+      "grid-base-item" identifica ogni cella della griglia.
+    -->
+    <section id="grid-base-test">
+      <h2>Test di grid</h2>
+      <div class="grid-base-container">
+        <div class="grid-base-item">Elemento A</div>
+        <div class="grid-base-item">Elemento B</div>
+        <div class="grid-base-item">Elemento C</div>
+      </div>
+    </section>
+
+    <!--
+      SEZIONE GRID AVANZATA:
+      mostra una griglia con più elementi.
+      "grid-advanced-container" è il contenitore della griglia avanzata.
+      "grid-advanced-item" identifica ogni elemento inserito nella griglia.
+    -->
+    <section id="grid-advanced-test">
+      <h2>Test di grid avanzato</h2>
+      <div class="grid-advanced-container">
+        <div class="grid-advanced-item">Elemento 1</div>
+        <div class="grid-advanced-item">Elemento 2</div>
+        <div class="grid-advanced-item">Elemento 3</div>
+      </div>
+    </section>
+
+    <!--
+      SEZIONE GRID AD AREA:
+      mostra una griglia costruita con aree nominate.
+      "grid-area-container" è il contenitore della griglia con aree definite.
+      "header", "sidebar", "content" e "footer" si collegano alle aree del CSS.
+    -->
+    <section id="grid-area-test">
+      <h2>Test di grid con aree</h2>
+      <div class="grid-area-container">
+        <div class="header">Header</div>
+        <div class="sidebar">Sidebar</div>
+        <div class="content">Content</div>
+        <div class="footer">Footer</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
