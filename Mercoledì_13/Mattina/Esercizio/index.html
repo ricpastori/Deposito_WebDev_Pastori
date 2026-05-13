@@ -15,12 +15,12 @@
 <body>
   <!-- Container principale: div con id="container"; grazie al CSS (#container), è centrato, ha bordi e larghezza massima -->
   <div id="container">
-    <!-- Titolo principale: h1; stilizzato con colore grigio e font Impact tramite CSS -->
+    <!-- Titolo principale: h1; stilizzato con colore darkblue e font Impact tramite CSS -->
     <h1>Giorno 3 - Esercitazione mattina</h1>
-    <!-- Paragrafo: elemento p; applica margine inferiore, colore nero e line-height grazie al CSS (cascata sovrascrive il rosso iniziale) -->
+    <!-- Paragrafo: elemento p; applica margine inferiore, colore nero e line-height grazie al CSS (la seconda regola p vince per cascata). -->
     <p>In questa esercitazione, abbiamo creato una semplice pagina web utilizzando HTML e CSS. Abbiamo imparato a strutturare il contenuto con elementi semantici e a stilizzare la pagina con regole CSS.</p>
-    <!-- Secondo paragrafo con link: il link <a> ha pseudo-classe :hover che cambia colore ad aqua nel CSS -->
-    <p><a href="../Esempio/index.html">Qui</a> puoi vedere un altro esempio fatto questa mattina</p>
+    <!-- Paragrafo con classe caption: la classe .caption nel CSS modifica margine e font-size. La specificità della classe è maggiore di un semplice selettore di elemento p. -->
+    <p class="caption"><a href="../Esempio/index.html">Qui</a> puoi vedere un altro esempio fatto questa mattina</p>
   </div>
 </body>
 </html>

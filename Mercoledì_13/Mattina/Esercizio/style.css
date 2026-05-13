@@ -1,4 +1,5 @@
-/* Il selettore universale * seleziona tutti gli elementi della pagina. Ha una specificità molto bassa (0,0,0,0). */
+/* Il selettore universale * seleziona tutti gli elementi della pagina. Ha una specificità molto bassa (0,0,0,0).
+   Il body è incluso nello stesso gruppo di selettori, quindi riceve anch'esso box-sizing, margin e padding. */
 *,
 body {
 	box-sizing: border-box;
@@ -20,7 +21,8 @@ h1 {
 	font-family: Impact, "Arial Narrow Bold", sans-serif;
 }
 
-/* Prima regola per il selettore p: imposta il colore a rosso. */
+/* Prima regola per il selettore p: imposta il colore a rosso.
+   Questa regola viene poi sovrascritta dalla seconda regola per lo stesso selettore. */
 p {
 	color: red;
 }
@@ -32,10 +34,12 @@ p {
 	line-height: 1.5;
 }
 
-/* Selettore pseudo-classe p:last-child: seleziona solo l'ultimo <p> dentro il contenitore.
-   Anche se ha la stessa specificità di un selettore di elemento, si applica solo all'ultimo paragrafo. */
-p:last-child {
+/* Selettore di classe .caption: specificità 0,0,1,0 (classe).
+   Una regola di classe ha priorità su una regola di solo elemento se entrambi colpiscono lo stesso elemento.
+   Qui aggiunge un margine inferiore diverso e regola la dimensione del font. */
+.caption {
 	margin-bottom: 0;
+	font-size: 0.875rem;
 }
 
 /* Selettore di elemento div. Specificità bassa (0,0,0,1). */
