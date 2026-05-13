@@ -6,15 +6,17 @@ body {
 	padding: 0;
 }
 
-/* Il font-family applicato al body viene ereditato dagli elementi figli, grazie all'ereditarietà CSS. */
+/* Il font-family applicato al body viene ereditato dagli elementi figli, grazie all'ereditarietà CSS.
+   La proprietà padding invece si applica solo al body, non viene ereditata. */
 body {
+	padding: 48px;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Selettore di elemento h1. Specificità: 0,0,0,1 (solo elemento). */
 h1 {
 	margin-bottom: 20px;
-	color: gray;
+	color: darkblue;
 	font-family: Impact, "Arial Narrow Bold", sans-serif;
 }
 
@@ -30,6 +32,12 @@ p {
 	line-height: 1.5;
 }
 
+/* Selettore pseudo-classe p:last-child: seleziona solo l'ultimo <p> dentro il contenitore.
+   Anche se ha la stessa specificità di un selettore di elemento, si applica solo all'ultimo paragrafo. */
+p:last-child {
+	margin-bottom: 0;
+}
+
 /* Selettore di elemento div. Specificità bassa (0,0,0,1). */
 div {
 	margin-top: 0;
@@ -38,9 +46,25 @@ div {
 /* Selettore ID #container. Alta specificità (0,1,0,0), vince su selettori di classe o elemento. */
 #container {
 	margin: 0 auto;
-	border: solid 1px lightgray;
+	border: solid 1px lightblue;
+	border-radius: 16px;
+	background-color: white;
 	padding: 20px;
 	max-width: 720px;
+}
+
+/* Pseudo-classe hover su #container: la specificità resta alta (ID), ma il selettore viene applicato
+   solo quando il mouse passa sopra il contenitore. La regola viene valutata insieme alle altre e vince
+   per specificità rispetto a eventuali selettori di elemento o classe. */
+#container:hover {
+	border-color: darkblue;
+	background-color: aliceblue;
+}
+
+/* Selettore a: colore di base del link. Ha specificità elemento. La regola a:hover poi può sovrascrivere
+   questo colore solo quando il link è attivo con il passaggio del mouse. */
+a {
+	color: blue;
 }
 
 /* Pseudo-classe :hover applicata al selettore a. Specificità: 0,0,1,1 (elemento + pseudo-classe). */
