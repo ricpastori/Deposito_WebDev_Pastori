@@ -9,8 +9,6 @@ body {
 		"sidebar main"
 		"footer footer";
 	gap: 24px;
-	height: 100dvh;
-	font-family: Arial, sans-serif;
 }
 
 #site-header {
@@ -53,11 +51,6 @@ body {
 	grid-area: sidebar;
 	background-color: #f4f4f4;
 	padding: 24px;
-
-	& ul {
-		/* Mostra i link della sidebar come lista puntata. */
-		list-style-type: disc;
-	}
 }
 
 #main-content {
