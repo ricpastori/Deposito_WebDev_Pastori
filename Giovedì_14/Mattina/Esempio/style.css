@@ -1,0 +1,106 @@
+/* Variabili globali */
+:root {
+	/* Colore principale riutilizzabile */
+	--primary-color: #084166;
+
+	/* Colore per testi chiari */
+	--secondary-color: white;
+
+	/* Font usato nella pagina */
+	--font-family: "Arial", sans-serif;
+
+	/* Spaziatura base */
+	--space-base: 16px;
+}
+
+/* Stile base della pagina */
+body {
+	font-family: var(--font-family);
+}
+
+/* Card */
+.card {
+	border-radius: 8px;
+	background-color: var(--primary-color);
+	padding: var(--space-base);
+}
+
+/* Contenuto della card */
+.card h2 {
+	margin-top: 0;
+	color: var(--secondary-color);
+}
+
+/* Variabile locale per il paragrafo */
+.card p {
+	--secondary-color: lightgray;
+	color: var(--secondary-color);
+}
+
+/* Icona prima del messaggio */
+.message::before {
+	content: "⚠ ";
+	color: red;
+}
+
+/* Icona dopo il messaggio */
+.message::after {
+	content: " ✔";
+	color: green;
+}
+
+/* Elemento visibile */
+.box1 {
+	/* display block occupa tutta la riga */
+	display: block;
+	background-color: lightblue;
+}
+
+/* Elemento nascosto ma con spazio occupato */
+.box2 {
+	/* visibility hidden nasconde senza togliere lo spazio */
+	visibility: hidden;
+	background-color: lightgreen;
+}
+
+/* Elemento rimosso dal layout */
+.box3 {
+	/* display none nasconde e libera lo spazio */
+	display: none;
+	background-color: coral;
+}
+
+/* Box animato */
+.animated-box {
+	/* Avvia l'animazione in loop */
+	animation: cambioColore 2s infinite;
+
+	/* Rende fluida la trasformazione */
+	transition: transform 0.3s;
+	background-color: steelblue;
+	width: 100px;
+	height: 100px;
+}
+
+/* Effetto al passaggio del mouse */
+.animated-box:hover {
+	transform: scale(1.2);
+}
+
+/* Animazione del colore */
+@keyframes cambioColore {
+	/* Stato iniziale */
+	0% {
+		background-color: steelblue;
+	}
+
+	/* Stato intermedio */
+	50% {
+		background-color: coral;
+	}
+
+	/* Stato finale */
+	100% {
+		background-color: steelblue;
+	}
+}
