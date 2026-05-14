@@ -105,9 +105,6 @@ a:hover {
 
 .brand-logo {
 	clip-path: circle();
-	/* Collega il logo all'animazione definita più sotto con @keyframes. */
-	/* "both" mantiene attivi gli stili del primo frame prima dell'avvio e dell'ultimo frame alla fine. */
-	animation: logoEntrance 0.8s ease both;
 	background-color: var(--color-header-bg);
 	width: 100%;
 	max-height: 120px;
@@ -116,7 +113,6 @@ a:hover {
 
 .brand-payoff {
 	display: block;
-	animation: logoEntrance 0.8s ease both;
 	margin-top: var(--space-md);
 	border: 1px solid var(--color-border);
 	border-radius: var(--radius-sm);
@@ -360,21 +356,10 @@ a:hover {
 	margin: 0;
 }
 
-/* Animazione iniziale del logo:
-   parte leggermente più piccolo e trasparente, poi arriva alla dimensione normale.
-   "both" nella proprietà animation mantiene applicato lo stato finale. */
-@keyframes logoEntrance {
-	0% {
-		transform: scale(0.94);
-		opacity: 0;
-	}
-
-	100% {
-		transform: scale(1);
-		opacity: 1;
-	}
-}
-
+/* Media query: le regole dentro questo blocco si applicano solo quando
+   la larghezza dello schermo è al massimo 800px.
+   Si usa per rendere la pagina responsive: layout a più colonne su desktop,
+   layout a una colonna su tablet e schermi piccoli. */
 @media (max-width: 800px) {
 	.footer-content,
 	.contacts-wrapper {
@@ -411,6 +396,8 @@ a:hover {
 	}
 }
 
+/* Seconda media query, più specifica: sotto i 480px siamo su smartphone stretti.
+   Qui si riducono larghezze e spaziature per far respirare meglio i contenuti. */
 @media (max-width: 480px) {
 	.main-content {
 		width: min(100% - 1.5rem, var(--container-width));
