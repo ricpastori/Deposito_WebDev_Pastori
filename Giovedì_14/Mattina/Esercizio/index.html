@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sito web gelateria Fior di Gelato, Via dei Pazzi 0, Città Laggiù">
+  <meta name="author" content="Fiordigelato">
+  <title>Fior di gelato</title>
+  <link rel="stylesheet" href="./assets/styles/style.css">
+</head>
+<body>
+  <!-- Header del sito con cover, logo e navigazione principale -->
+  <header id="site-header" class="site-header">
+    <!-- Cover principale con logo centrato -->
+    <div class="header-cover">
+      <div class="brand">
+        <img class="brand-logo" src="./assets/img/logo.png" alt="Logo Fior di gelato">
+        <span class="brand-payoff">Gelateria artigianale</span>
+      </div>
+    </div>
+
+    <!-- Menu di navigazione principale -->
+    <nav id="main-nav" class="main-nav" aria-label="Navigazione principale">
+      <ul class="nav-list">
+        <li><a href="#about">Chi siamo</a></li>
+        <li><a href="#promotions">Promozioni</a></li>
+        <li><a href="#flavors">Gusti</a></li>
+        <li><a href="#contacts">Contatti</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenuto principale della pagina -->
+  <main id="main-content" class="main-content">
+    <!-- Sezione introduttiva sulla gelateria -->
+    <section id="about" class="section about-section">
+      <h2>Chi siamo</h2>
+      <p>Siamo una gelateria artigianale che propone gusti unici e pregiati, realizzati con ingredienti di alta qualità.</p>
+      <p class="visibility-demo" aria-hidden="true">Elemento nascosto con visibility.</p>
+      <p class="display-demo" aria-hidden="true">Elemento rimosso con display.</p>
+    </section>
+
+    <!-- Sezione promozioni -->
+    <section id="promotions" class="section promotions-section">
+      <h2>Promozioni</h2>
+
+      <!-- Lista delle promozioni disponibili -->
+      <div class="promotion-list">
+        <article class="promotion-card" id="promo-family">
+          <h3>Formato famiglia</h3>
+          <p>Ogni mercoledì vaschetta da 1 kg con quattro gusti a scelta a prezzo speciale.</p>
+        </article>
+        <article class="promotion-card" id="promo-studenti">
+          <h3>Pausa studenti</h3>
+          <p>Cono piccolo e granita in offerta dal lunedì al venerdì, dalle 15:00 alle 17:00.</p>
+        </article>
+        <article class="promotion-card" id="promo-fedelta">
+          <h3>Carta fedeltà</h3>
+          <p>Raccogli un timbro a ogni acquisto: il decimo gelato lo offriamo noi.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sezione gusti -->
+    <section id="flavors" class="section flavors-section">
+      <h2>Gusti</h2>
+      <p class="section-intro">Ogni giorno prepariamo creme, frutta e specialità stagionali nel nostro laboratorio.</p>
+
+      <!-- Lista dei gusti principali -->
+      <ul class="flavor-list">
+        <li class="flavor-item" id="flavor-pistacchio">Pistacchio di Bronte</li>
+        <li class="flavor-item" id="flavor-cioccolato">Cioccolato fondente</li>
+        <li class="flavor-item" id="flavor-nocciola">Nocciola piemontese</li>
+        <li class="flavor-item" id="flavor-fragola">Fragola fresca</li>
+        <li class="flavor-item" id="flavor-limone">Limone di Sicilia</li>
+        <li class="flavor-item" id="flavor-fiordilatte">Fiordilatte</li>
+      </ul>
+    </section>
+
+    <!-- Sezione contatti -->
+    <section id="contacts" class="section contacts-section">
+      <h2>Contatti</h2>
+
+      <!-- Informazioni di contatto e orari -->
+      <div class="contacts-wrapper">
+        <div class="contact-info" id="contact-info">
+          <h3>Dove siamo</h3>
+          <p>Via dei Pazzi 0, Città Laggiù</p>
+          <p><a href="mailto:info@fiordigelato.it">info@fiordigelato.it</a></p>
+          <p><a href="tel:+390000000000">+39 000 000 0000</a></p>
+        </div>
+        <div class="opening-hours" id="opening-hours">
+          <h3>Orari</h3>
+          <p>Lunedì - Venerdì: 10:00 - 20:00</p>
+          <p>Sabato - Domenica: 11:00 - 21:00</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer del sito -->
+  <footer id="site-footer" class="site-footer">
+    <!-- Contenuto principale del footer -->
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img class="brand-logo" src="./assets/img/logo.png" alt="Logo Fior di gelato">
+      </div>
+
+      <!-- Menu di navigazione secondario -->
+      <div class="footer-menu">
+        <nav class="footer-nav" aria-label="Navigazione footer">
+          <ul class="footer-nav-list">
+            <li><a href="#promotions">Promozioni</a></li>
+            <li><a href="#flavors">Gusti</a></li>
+            <li><a href="#contacts">Contatti</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Riepilogo contatti e orari -->
+      <div class="footer-contacts">
+        <h3>Contatti</h3>
+        <p>Via dei Pazzi 0, Città Laggiù</p>
+        <p>Email: info@fiordigelato.it</p>
+        <h3>Orari</h3>
+        <p>Lunedì - Venerdì: 10:00 - 20:00</p>
+        <p>Sabato - Domenica: 11:00 - 21:00</p>
+      </div>
+    </div>
+
+    <!-- Riga finale con copyright -->
+    <div class="footer-bottom">
+      <p>&copy; 2024 Fior di gelato. Tutti i diritti riservati.</p>
+    </div>
+  </footer>
+</body>
+</html>

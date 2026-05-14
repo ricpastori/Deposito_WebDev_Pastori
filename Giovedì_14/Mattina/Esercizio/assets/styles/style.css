@@ -1,0 +1,426 @@
+:root {
+	--color-bg: #fffaf2;
+	--color-surface: #ffffff;
+	--color-surface-soft: #f6ead8;
+	--color-primary: #4d2b1a;
+	--color-secondary: #8f5d3f;
+	--color-accent: #d85f7a;
+	--color-accent-soft: #ffe0e7;
+	--color-muted: #76665c;
+	--color-border: #ead8c3;
+	--color-header-bg: rgba(255, 250, 242, 0.94);
+	--color-shadow: rgba(77, 43, 26, 0.1);
+	--color-shadow-strong: rgba(77, 43, 26, 0.16);
+	--color-footer-border: rgba(255, 250, 242, 0.22);
+	--cover-image: url("../img/cover.jpg");
+
+	--font-main: Arial, Helvetica, sans-serif;
+	--font-title: Georgia, "Times New Roman", serif;
+
+	--space-xs: 0.5rem;
+	--space-sm: 0.75rem;
+	--space-md: 1rem;
+	--space-lg: 1.5rem;
+	--space-xl: 2.5rem;
+	--space-xxl: 4rem;
+
+	--container-width: 1100px;
+	--radius-sm: 6px;
+	--radius-md: 8px;
+	--radius-round: 999px;
+	--transition-base: 0.25s ease;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	background-color: var(--color-bg);
+	color: var(--color-primary);
+	font-size: 1rem;
+	line-height: 1.6;
+	font-family: var(--font-main);
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--color-accent);
+}
+
+.site-header {
+	border-bottom: 1px solid var(--color-border);
+	background-color: var(--color-bg);
+}
+
+.header-cover {
+	display: flex;
+	/* Serve come riferimento per posizionare l'overlay assoluto con ::before. */
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	background-image: var(--cover-image);
+	background-position: center;
+	background-size: cover;
+	padding: var(--space-xl);
+	height: 320px;
+}
+
+/* Pseudo-elemento usato come overlay: crea un velo chiaro sopra l'immagine di sfondo,
+   così il logo resta leggibile senza aggiungere un elemento vuoto nell'HTML. */
+.header-cover::before {
+	position: absolute;
+	opacity: 0.5;
+	z-index: 2;
+	inset: 0;
+	background: linear-gradient(var(--color-header-bg), var(--color-header-bg));
+	width: 100dvw;
+	height: 320px;
+	content: "";
+}
+
+.brand {
+	position: relative;
+	/* z-index più alto dell'overlay, così il logo rimane sopra al velo della cover. */
+	z-index: 3;
+	border-radius: var(--radius-md);
+	padding: var(--space-lg) var(--space-xl);
+	text-align: center;
+}
+
+.brand-logo {
+	clip-path: circle();
+	/* Collega il logo all'animazione definita più sotto con @keyframes. */
+	/* "both" mantiene attivi gli stili del primo frame prima dell'avvio e dell'ultimo frame alla fine. */
+	animation: logoEntrance 0.8s ease both;
+	background-color: var(--color-header-bg);
+	width: 100%;
+	max-height: 120px;
+	object-fit: contain;
+}
+
+.brand-payoff {
+	display: block;
+	animation: logoEntrance 0.8s ease both;
+	margin-top: var(--space-md);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-sm);
+	background-color: var(--color-header-bg);
+	padding: var(--space-xs) var(--space-sm);
+	color: var(--color-secondary);
+	font-weight: 700;
+	font-size: 0.85rem;
+	text-transform: uppercase;
+}
+
+.main-nav {
+	display: flex;
+	position: sticky;
+	top: 0;
+	justify-content: center;
+	z-index: 10;
+	backdrop-filter: blur(12px);
+	border-top: 1px solid var(--color-border);
+	background-color: var(--color-header-bg);
+	padding: var(--space-md) var(--space-xl);
+}
+
+.nav-list,
+.footer-nav-list,
+.flavor-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.nav-list {
+	display: flex;
+	align-items: center;
+	gap: var(--space-lg);
+	color: var(--color-secondary);
+	font-weight: 700;
+}
+
+.nav-list a {
+	display: inline-block;
+	transition:
+		color var(--transition-base),
+		border-color var(--transition-base);
+	border-bottom: 2px solid transparent;
+	padding: var(--space-xs) 0;
+}
+
+.nav-list a:hover {
+	border-color: var(--color-accent);
+}
+
+.main-content {
+	margin: 0 auto;
+	width: min(100% - 2rem, var(--container-width));
+}
+
+.section {
+	border-bottom: 1px solid var(--color-border);
+	padding: var(--space-xxl) 0;
+}
+
+.section h2 {
+	margin: 0 0 var(--space-md);
+	font-size: clamp(2rem, 5vw, 4.5rem);
+	line-height: 1;
+	font-family: var(--font-title);
+}
+
+.section h3 {
+	margin: 0 0 var(--space-sm);
+	font-size: 1.35rem;
+	font-family: var(--font-title);
+}
+
+.section p {
+	margin: 0;
+	color: var(--color-muted);
+}
+
+.about-section {
+	display: grid;
+	align-content: center;
+	padding-top: var(--space-xxl);
+	min-height: 58vh;
+}
+
+.about-section p {
+	max-width: 720px;
+	color: var(--color-secondary);
+	font-size: clamp(1.2rem, 2.5vw, 2rem);
+}
+
+/* visibility: hidden nasconde l'elemento, ma mantiene occupato il suo spazio nel layout. */
+.visibility-demo {
+	visibility: hidden;
+}
+
+/* display: none nasconde l'elemento e lo rimuove dal layout, quindi non occupa spazio. */
+.display-demo {
+	display: none;
+}
+
+.section-intro {
+	margin-bottom: var(--space-xl);
+	max-width: 680px;
+	font-size: 1.15rem;
+}
+
+.promotion-list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: var(--space-md);
+	margin-top: var(--space-xl);
+}
+
+.promotion-card {
+	transition:
+		transform var(--transition-base),
+		box-shadow var(--transition-base);
+	box-shadow: 0 14px 35px var(--color-shadow);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-md);
+	background-color: var(--color-surface);
+	padding: var(--space-lg);
+	min-height: 210px;
+}
+
+.promotion-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 18px 45px var(--color-shadow-strong);
+}
+
+.promotion-card::before {
+	display: inline-block;
+	margin-bottom: var(--space-md);
+	border-radius: var(--radius-round);
+	background-color: var(--color-accent-soft);
+	padding: 0.25rem var(--space-sm);
+	content: "Promo";
+	color: var(--color-accent);
+	font-weight: 700;
+	font-size: 0.75rem;
+	text-transform: uppercase;
+}
+
+.flavor-list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: var(--space-sm);
+	margin-top: var(--space-lg);
+}
+
+.flavor-item {
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-round);
+	background-color: var(--color-surface-soft);
+	padding: var(--space-md) var(--space-lg);
+	color: var(--color-secondary);
+	font-weight: 700;
+}
+
+.contacts-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: var(--space-md);
+	margin-top: var(--space-xl);
+}
+
+.contact-info,
+.opening-hours {
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-md);
+	background-color: var(--color-surface);
+	padding: var(--space-lg);
+}
+
+.contact-info p + p,
+.opening-hours p + p,
+.footer-contacts p + h3 {
+	margin-top: var(--space-sm);
+}
+
+.contact-info a {
+	color: var(--color-accent);
+	font-weight: 700;
+}
+
+.site-footer {
+	margin-top: var(--space-xl);
+	background-color: var(--color-primary);
+	padding: var(--space-xl);
+	color: var(--color-bg);
+}
+
+.footer-content {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1.4fr;
+	gap: var(--space-xl);
+	margin: 0 auto;
+	width: min(100%, var(--container-width));
+}
+
+.footer-logo {
+	display: flex;
+	align-items: flex-start;
+}
+
+.footer-logo img {
+	width: 120px;
+	min-height: 80px;
+	object-fit: contain;
+}
+
+.footer-nav-list {
+	display: grid;
+	gap: var(--space-sm);
+	font-weight: 700;
+}
+
+.footer-contacts h3 {
+	margin: 0 0 var(--space-xs);
+	font-family: var(--font-title);
+}
+
+.footer-contacts p {
+	margin: 0;
+	color: var(--color-surface-soft);
+}
+
+.footer-bottom {
+	margin: var(--space-xl) auto 0;
+	border-top: 1px solid var(--color-footer-border);
+	padding-top: var(--space-md);
+	width: min(100%, var(--container-width));
+	color: var(--color-surface-soft);
+	font-size: 0.9rem;
+}
+
+.footer-bottom p {
+	margin: 0;
+}
+
+/* Animazione iniziale del logo:
+   parte leggermente più piccolo e trasparente, poi arriva alla dimensione normale.
+   "both" nella proprietà animation mantiene applicato lo stato finale. */
+@keyframes logoEntrance {
+	0% {
+		transform: scale(0.94);
+		opacity: 0;
+	}
+
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@media (max-width: 800px) {
+	.footer-content,
+	.contacts-wrapper {
+		grid-template-columns: 1fr;
+	}
+
+	.header-cover {
+		padding: var(--space-md);
+		min-height: 260px;
+	}
+
+	.main-nav {
+		position: static;
+		justify-content: flex-start;
+		padding: var(--space-md);
+	}
+
+	.nav-list {
+		flex-wrap: wrap;
+		gap: var(--space-sm) var(--space-md);
+	}
+
+	.promotion-list,
+	.flavor-list {
+		grid-template-columns: 1fr;
+	}
+
+	.about-section {
+		min-height: auto;
+	}
+
+	.section {
+		padding: var(--space-xl) 0;
+	}
+}
+
+@media (max-width: 480px) {
+	.main-content {
+		width: min(100% - 1.5rem, var(--container-width));
+	}
+
+	.brand-logo {
+		width: 145px;
+	}
+
+	.site-footer {
+		padding: var(--space-xl) var(--space-md);
+	}
+}
