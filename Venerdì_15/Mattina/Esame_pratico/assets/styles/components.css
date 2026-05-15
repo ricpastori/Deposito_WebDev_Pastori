@@ -1,0 +1,222 @@
+/* ===== Base tipografica ===== */
+
+body {
+	background: var(--color-paper);
+	color: var(--color-ink);
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-body);
+	font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3 {
+	line-height: var(--line-height-heading);
+	font-family: var(--font-heading);
+}
+
+h1 {
+	margin-bottom: var(--space-xl);
+	max-width: var(--title-width);
+	font-size: var(--font-size-h1);
+}
+
+h2 {
+	margin-bottom: var(--space-lg);
+	font-size: var(--font-size-h2);
+}
+
+h3 {
+	margin-bottom: var(--space-sm);
+	font-size: var(--font-size-card-title);
+}
+
+label {
+	font-weight: var(--font-weight-heavy);
+}
+
+input,
+textarea {
+	border: var(--border-thin) solid var(--color-border-strong);
+	border-radius: var(--radius-field);
+	padding: var(--space-field-y) var(--space-field-x);
+	width: var(--full-width);
+	color: var(--color-ink);
+	font: inherit;
+}
+
+/* Aggiunge uno stato focus visibile ai campi. */
+input:focus,
+textarea:focus {
+	outline: var(--outline-focus-width) solid var(--color-focus);
+	border-color: var(--color-primary);
+}
+
+textarea {
+	resize: vertical;
+}
+
+/* ===== Brand e navigazione ===== */
+
+/* Allinea logo e nome del brand con flex. */
+.logo {
+	display: flex;
+	align-items: center;
+	gap: var(--space-xs);
+	font-weight: var(--font-weight-bold);
+}
+
+.brand-logo {
+	height: var(--logo-header-height);
+	object-fit: cover;
+	object-position: center;
+}
+
+.brand-text {
+	color: var(--color-primary-dark);
+	font-weight: var(--font-weight-bold);
+	font-size: var(--font-size-brand);
+	font-family: var(--font-heading);
+}
+
+/* Dispone le voci del menu in riga e permette il ritorno a capo. */
+.main-nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	gap: var(--space-lg);
+}
+
+.main-nav a {
+	transition: color var(--transition-fast);
+	color: var(--color-muted);
+	font-weight: var(--font-weight-bold);
+	font-size: var(--font-size-nav);
+}
+
+.main-nav a:hover {
+	color: var(--color-rose);
+}
+
+/* ===== Elementi riutilizzabili ===== */
+
+.eyebrow {
+	margin-bottom: var(--space-sm);
+	color: var(--color-rose);
+	font-weight: var(--font-weight-heavy);
+	font-size: var(--font-size-eyebrow);
+	letter-spacing: 0;
+	text-transform: uppercase;
+}
+
+.button {
+	display: inline-block;
+	transition:
+		background-color var(--transition-fast),
+		border-color var(--transition-fast),
+		color var(--transition-fast);
+	cursor: pointer;
+	border: var(--border-button) solid var(--color-transparent);
+	border-radius: var(--radius-card);
+	padding: var(--space-field-y) var(--space-xl);
+	min-height: var(--button-min-height);
+	font-weight: var(--font-weight-heavy);
+	text-align: center;
+}
+
+.button-primary {
+	background: var(--color-primary);
+	color: var(--color-white);
+}
+
+.button-primary:hover {
+	background: var(--color-primary-dark);
+}
+
+.button-secondary {
+	border-color: var(--color-white-border);
+	color: var(--color-white);
+}
+
+.button-secondary:hover {
+	background: var(--color-white-hover);
+}
+
+/* ===== Card servizi ===== */
+
+.service-card {
+	box-shadow: var(--shadow-card);
+	border: var(--border-thin) solid var(--color-border);
+	border-radius: var(--radius-card);
+	background: var(--color-white);
+	overflow: hidden;
+}
+
+.service-card img {
+	border-bottom: var(--border-accent) solid var(--color-blush);
+	aspect-ratio: var(--image-service-ratio);
+	width: var(--full-width);
+	object-fit: cover;
+}
+
+.service-card div {
+	padding: var(--space-xl);
+}
+
+.service-card p {
+	color: var(--color-muted);
+}
+
+/* ===== Form contatti ===== */
+
+/* Organizza il form in griglia responsive. */
+.contact-form {
+	display: grid;
+	grid-template-columns: repeat(var(--grid-tablet-columns), minmax(var(--space-zero), 1fr));
+	gap: var(--space-lg);
+	box-shadow: var(--shadow-soft);
+	border: var(--border-thin) solid var(--color-border);
+	border-radius: var(--radius-card);
+	background: var(--color-white);
+	padding: var(--space-3xl);
+}
+
+.form-row {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-xs);
+}
+
+/* Fa occupare tutta la larghezza agli elementi larghi del form. */
+.form-row.full,
+.privacy,
+.contact-form button {
+	grid-column: var(--layout-full-span);
+}
+
+/* Allinea checkbox e testo privacy con flex. */
+.privacy {
+	display: flex;
+	align-items: flex-start;
+	gap: var(--space-sm);
+	color: var(--color-muted);
+	font-size: var(--font-size-privacy);
+}
+
+.privacy input {
+	margin-top: var(--space-checkbox-top);
+	width: auto;
+}
+
+.contact-form button {
+	justify-self: start;
+}
+
+/* ===== Logo footer ===== */
+
+.footer-logo {
+	margin-bottom: var(--space-md);
+	background-color: var(--color-white);
+	width: var(--logo-footer-width);
+	height: var(--logo-footer-height);
+}

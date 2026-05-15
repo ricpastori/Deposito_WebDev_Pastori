@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!-- Metadati base della pagina. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fior di Natura: fioraio artigianale per bouquet, composizioni floreali, matrimoni, eventi e consegne a domicilio.">
+    <meta name="author" content="©FiorDiNatura">
+    <title>Fior di Natura | Fioraio artigianale</title>
+
+    <!-- Connessione anticipata al dominio delle immagini. -->
+    <link rel="preconnect" href="https://images.unsplash.com">
+
+    <!-- Caricamento font di Google tramite CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&amp;family=Playfair+Display:wght@600;700;800&amp;display=swap" rel="stylesheet">
+
+    <!-- Fogli di stile del progetto. -->
+    <link rel="stylesheet" href="assets/styles/reset.css">
+    <link rel="stylesheet" href="assets/styles/theme.css">
+    <link rel="stylesheet" href="assets/styles/components.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+<body>
+    <!-- Intestazione fissa con navigazione interna alle sezioni principali del sito. -->
+    <header class="site-header">
+        <!-- aria-label descrive l'elemento per gli screen reader. In questo caso viene utilizzato per il link con il logo, perché l'immagine non basta come testo accessibile.
+        -->
+        <a class="logo" href="#home" aria-label="Torna alla home">
+            <img class="brand-logo" src="assets/img/logo.png" alt="Logo Fior di Natura">
+            <span class="brand-text">Fior di Natura</span>
+        </a>
+        <nav class="main-nav">
+            <a href="#chi-siamo">Chi siamo</a>
+            <a href="#servizi">Servizi</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contatti">Contatti</a>
+        </nav>
+    </header>
+
+    <main id="home">
+        <!-- Hero con messaggio emozionale, contatto rapido e immagine floreale. -->
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">Fioraio con oltre 6000 anni di esperienza</p>
+                <h1>Fiori naturali, eleganti e creati con cura</h1>
+                <p>
+                    Bouquet freschi, composizioni su misura e allestimenti floreali
+                    dallo stile romantico, leggero e ispirato ai colori della natura.
+                </p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#contatti">Richiedi informazioni</a>
+                    <a class="button button-secondary" href="#servizi">Scopri i servizi</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione di presentazione del negozio e del metodo di lavoro. -->
+        <section class="section split" id="chi-siamo">
+            <div>
+                <p class="eyebrow">Chi siamo</p>
+                <h2>Fiori scelti con cura, composizioni create a mano</h2>
+                <p>
+                    Fior di Natura nasce dalla passione per l'arte floreale e per le piccole
+                    attenzioni quotidiane. Ogni creazione parte dall'ascolto: occasione,
+                    colori preferiti, stile dell'ambiente e messaggio da comunicare.
+                </p>
+                <p>
+                    Realizziamo bouquet personalizzati, centrotavola, allestimenti per
+                    cerimonie e soluzioni floreali per attività commerciali, sempre con
+                    fiori freschi e una lavorazione artigianale.
+                </p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Fioraia che prepara un bouquet in laboratorio">
+        </section>
+
+        <!-- Le card riassumono i principali servizi offerti dal fioraio. -->
+        <section class="section services" id="servizi">
+            <div class="section-heading">
+                <p class="eyebrow">Cosa facciamo</p>
+                <h2>Servizi floreali</h2>
+                <p>Soluzioni raffinate per privati, aziende, cerimonie e regali last minute.</p>
+            </div>
+
+            <div class="service-grid">
+                <article class="service-card">
+                    <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Bouquet colorato con fiori freschi">
+                    <div>
+                        <h3>Bouquet su misura</h3>
+                        <p>Composizioni personalizzate per compleanni, anniversari, lauree e pensieri speciali.</p>
+                    </div>
+                </article>
+
+                <article class="service-card">
+                    <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Allestimento floreale per matrimonio">
+                    <div>
+                        <h3>Matrimoni ed eventi</h3>
+                        <p>Progetti floreali coordinati per cerimonie, ricevimenti, eventi privati e vetrine.</p>
+                    </div>
+                </article>
+
+                <article class="service-card">
+                    <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Fiori disposti in una composizione decorativa">
+                    <div>
+                        <h3>Allestimenti aziendali</h3>
+                        <p>Decorazioni stagionali per uffici, showroom, ristoranti e spazi di accoglienza.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Blocco breve per evidenziare il servizio locale di consegna. -->
+        <section class="delivery">
+            <div>
+                <p class="eyebrow">Consegna locale</p>
+                <h2>Consegna gratuita a Città Laggiù</h2>
+            </div>
+            <p>
+                Ordina il tuo bouquet entro le 11:00: prepariamo la composizione in giornata
+                e la consegniamo nei quartieri di Città Laggiù con biglietto personalizzato.
+            </p>
+        </section>
+
+        <!-- Gallery statica: nessuno script, solo immagini responsive. -->
+        <section class="section gallery" id="gallery">
+            <div class="section-heading">
+                <p class="eyebrow">Ispirazioni</p>
+                <h2>Gallery floreale</h2>
+            </div>
+            <div class="gallery-grid">
+                <img src="https://images.unsplash.com/photo-1487070183336-b863922373d4?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Bouquet romantico sui toni rosa">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Pastel_rose_bouquet_%28Unsplash%29.jpg/1280px-Pastel_rose_bouquet_%28Unsplash%29.jpg" alt="Bouquet di rose pastello con dettagli verdi">
+                <img src="https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Fiori freschi esposti in negozio">
+                <img src="https://images.unsplash.com/photo-1455659817273-f96807779a8a?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Tulipani colorati in primo piano">
+            </div>
+        </section>
+
+        <!-- Form di contatto -->
+        <section class="section contact" id="contatti">
+            <div class="contact-info">
+                <p class="eyebrow">Contattaci</p>
+                <h2>Raccontaci che fiori stai cercando</h2>
+                <p>
+                    Compila il form per richiedere un preventivo, prenotare una composizione
+                    o ricevere informazioni su consegne e allestimenti.
+                </p>
+                <ul class="contact-list">
+                    <li><strong>Telefono:</strong> +39 392 523 7392</li>
+                    <li><strong>Email:</strong> info@fiordinatura.it</li>
+                    <li><strong>Indirizzo:</strong> Via dei Petali, 28 - Città Laggiù</li>
+                </ul>
+            </div>
+
+            <form class="contact-form" action="#" method="post">
+                <div class="form-row">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" placeholder="Il tuo nome" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="cognome">Cognome</label>
+                    <input type="text" id="cognome" name="cognome" placeholder="Il tuo cognome" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="nome@email.it" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="telefono">Telefono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="+39 000 000 0000">
+                </div>
+
+                <div class="form-row full">
+                    <label for="messaggio">Messaggio</label>
+                    <textarea id="messaggio" name="messaggio" rows="5" placeholder="Scrivi qui la tua richiesta" required></textarea>
+                </div>
+
+                <label class="privacy">
+                    <input type="checkbox" name="privacy" required>
+                    <span>Ho letto e accetto l'informativa privacy.</span>
+                </label>
+
+                <button class="button button-primary" type="submit">Invia richiesta</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer con dati aziendali e link rapidi. -->
+    <footer class="site-footer">
+        <div>
+            <img class="brand-logo footer-logo" src="assets/img/logo.png" alt="Logo Fior di Natura">
+            <h2>Fior di Natura</h2>
+            <p>Fioraio e flower design artigianale a Città Laggiù.</p>
+        </div>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#servizi">Servizi</a>
+            <a href="#contatti">Contatti</a>
+        </div>
+        <p class="copyright">© 2026 Fior di Natura - Progetto didattico</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,129 @@
+/* ===== Tema globale ===== */
+
+/* Raccoglie tutti i token grafici riutilizzati dai CSS. */
+:root {
+	/* Colori principali del brand. */
+	--color-ink: #354238;
+	--color-muted: #708071;
+	--color-primary: #586b5b;
+	--color-primary-dark: #334537;
+	--color-sage: #dfe7dc;
+	--color-mint: #f2f6ef;
+	--color-blush: #f4d9d9;
+	--color-paper: #fbfaf4;
+	--color-rose: #c9858c;
+	--color-white: #ffffff;
+
+	/* Colori applicati a elementi e stati specifici. */
+	--color-border: rgba(53, 66, 56, 0.12);
+	--color-border-strong: rgba(53, 66, 56, 0.22);
+	--color-header-bg: rgba(251, 250, 244, 0.96);
+	--color-hero-start: rgba(53, 66, 56, 0.72);
+	--color-hero-end: rgba(244, 217, 217, 0.18);
+	--color-delivery-start: rgba(51, 69, 55, 0.95);
+	--color-delivery-end: rgba(88, 107, 91, 0.92);
+	--color-footer-text-muted: rgba(255, 255, 255, 0.7);
+	--color-focus: rgba(201, 133, 140, 0.2);
+	--color-white-border: rgba(255, 255, 255, 0.75);
+	--color-white-border-soft: rgba(255, 255, 255, 0.32);
+	--color-white-hover: rgba(255, 255, 255, 0.16);
+	--color-transparent: transparent;
+
+	/* Font, dimensioni e pesi tipografici. */
+	--font-body: "Nunito Sans", Arial, Helvetica, sans-serif;
+	--font-heading: "Playfair Display", Georgia, "Times New Roman", serif;
+	--font-size-base: 16px;
+	/* Type scale Major Second: ogni step cresce con rapporto 1.125. */
+	--font-size-eyebrow: 0.79rem;
+	--font-size-nav: 0.889rem;
+	--font-size-brand: 1.125rem;
+	--font-size-lead: 1.125rem;
+	--font-size-delivery-copy: 1.125rem;
+	--font-size-privacy: 0.889rem;
+	--font-size-card-title: 1.266rem;
+	--font-size-footer-title: 1.424rem;
+	/* clamp() imposta un valore minimo, uno fluido e uno massimo per testi responsive. */
+	--font-size-h1: clamp(2.281rem, 7vw, 5.202rem);
+	--font-size-h2: clamp(1.602rem, 4vw, 2.887rem);
+	--line-height-body: 1.6;
+	--line-height-heading: 1.15;
+	--font-weight-bold: 700;
+	--font-weight-heavy: 800;
+
+	/* Spaziature riutilizzate nei layout, basate su una scala di 4px. */
+	--space-xs: 8px;
+	--space-sm: 12px;
+	--space-md: 16px;
+	--space-lg: 20px;
+	--space-xl: 24px;
+	--space-2xl: 24px;
+	--space-3xl: 28px;
+	--space-4xl: 32px;
+	--space-5xl: 40px;
+	--space-6xl: 44px;
+	--space-7xl: 48px;
+	--space-delivery-gap: 32px;
+	--space-footer: 44px;
+	--space-footer-links: 16px;
+	--space-mobile-section: 64px;
+	--space-section: 88px;
+	--space-hero-y: 88px;
+	--space-delivery-y: 60px;
+	--space-mobile-hero-top: 72px;
+	--space-page: 6vw;
+	--space-page-mobile: 5vw;
+	--space-field-y: 12px;
+	--space-field-x: 16px;
+	--space-paragraph-stack: 16px;
+	--space-checkbox-top: 4px;
+	--space-zero: 0;
+	/* 44px garantisce un'area touch comoda sui dispositivi mobile. */
+	--button-min-height: 44px;
+
+	/* Bordi, raggi, outline e ombre. */
+	--radius-field: 8px;
+	--radius-card: 8px;
+	--radius-pill: 999px;
+	--radius-arch: 999px 999px 8px 8px;
+	--border-thin: 1px;
+	--border-button: 2px;
+	--border-accent: 4px;
+	--border-frame: 8px;
+	--border-photo: 12px;
+	--outline-focus-width: 4px;
+	--shadow-soft: 0 16px 40px rgba(53, 66, 56, 0.13);
+	--shadow-card: 0 12px 28px rgba(53, 66, 56, 0.08);
+
+	/* Dimensioni e colonne dei layout principali. */
+	--hero-min-height: 72vh;
+	--hero-min-height-mobile: 80vh;
+	--hero-content-width: 672px;
+	--title-width: 816px;
+	--copy-width: 624px;
+	--section-heading-width: 720px;
+	/* Limita la riga a circa 70 caratteri per migliorare leggibilita e accessibilita. */
+	--readable-line-width: 70ch;
+	--full-width: 100%;
+	--layout-split-image-min: 288px;
+	--layout-split-image-size: 0.85fr;
+	--layout-delivery-title-size: 40%;
+	--layout-single-column: 1fr;
+	--layout-footer-columns: 1fr auto;
+	--layout-full-span: 1 / -1;
+	--grid-services-columns: 3;
+	--grid-gallery-columns: 4;
+	--grid-tablet-columns: 2;
+	--image-service-ratio: 4 / 3;
+	--image-square-ratio: 1;
+	--image-tall-height: 512px;
+	--image-tablet-height: 384px;
+	--logo-header-height: 72px;
+	--logo-footer-width: 112px;
+	--logo-footer-height: 80px;
+	--decor-line-width: 60px;
+	--decor-line-height: 4px;
+	--z-header: 10;
+
+	/* Durata delle animazioni semplici. */
+	--transition-fast: 180ms ease;
+}

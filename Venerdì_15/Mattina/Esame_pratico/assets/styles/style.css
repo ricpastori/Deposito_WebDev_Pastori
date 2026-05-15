@@ -1,0 +1,323 @@
+/* ===== Header ===== */
+
+/* Combina sticky positioning e flex layout per l'header. */
+.site-header {
+	display: flex;
+	position: sticky;
+	top: 0;
+	right: 0;
+	left: 0;
+	justify-content: space-between;
+	align-items: center;
+	gap: var(--space-2xl);
+	z-index: var(--z-header);
+	border-bottom: var(--border-thin) solid var(--color-border);
+	background: var(--color-header-bg);
+	padding: var(--space-xs) var(--space-2xl);
+}
+
+/* ===== Hero ===== */
+
+.hero {
+	display: flex;
+	align-items: center;
+	background:
+		linear-gradient(90deg, var(--color-hero-start), var(--color-hero-end)),
+		url("https://images.unsplash.com/photo-1694620131938-0f88d08610a4?auto=format&fit=crop&w=1600&q=80")
+		center / cover;
+	padding: var(--space-hero-y) var(--space-page);
+	min-height: var(--hero-min-height);
+	color: var(--color-white);
+}
+
+.hero-content {
+	max-width: var(--hero-content-width);
+}
+
+.hero .eyebrow {
+	color: var(--color-blush);
+}
+
+.hero p {
+	max-width: var(--copy-width);
+	font-size: var(--font-size-lead);
+}
+
+/* Dispone i bottoni della hero in riga. */
+.hero-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--space-md);
+	margin-top: var(--space-4xl);
+}
+
+/* ===== Sezioni generali ===== */
+
+/* Permette l'uso della linea decorativa nelle sezioni selezionate. */
+.section:not(.services):not(.contact) {
+	position: relative;
+}
+
+/* Disegna la piccola linea decorativa sopra alcune sezioni. */
+.section:not(.services):not(.contact)::before {
+	position: absolute;
+	top: var(--space-2xl);
+	left: var(--space-page);
+	background: var(--color-blush);
+	width: var(--decor-line-width);
+	height: var(--decor-line-height);
+	content: "";
+}
+
+.section {
+	padding: var(--space-section) var(--space-page);
+}
+
+/* ===== Sezione chi siamo ===== */
+
+/* Divide testo e immagine con flex, senza una griglia rigida. */
+.split {
+	display: flex;
+	align-items: center;
+	gap: var(--space-7xl);
+}
+
+.split > * {
+	flex: 1 1 var(--space-zero);
+}
+
+.split > img {
+	flex: 0 1 var(--layout-split-image-min);
+}
+
+/* Mantiene i paragrafi leggibili evitando righe troppo lunghe. */
+.split p {
+	max-width: var(--readable-line-width);
+}
+
+.split p + p {
+	margin-top: var(--space-paragraph-stack);
+}
+
+/* Modella l'immagine laterale con cornice e forma arcuata. */
+.split img {
+	box-shadow: var(--shadow-soft);
+	border: var(--border-photo) solid var(--color-white);
+	border-radius: var(--radius-arch);
+	width: var(--full-width);
+	height: var(--image-tall-height);
+	object-fit: cover;
+}
+
+/* ===== Titoli di sezione ===== */
+
+.section-heading {
+	margin: 0 auto var(--space-5xl);
+	max-width: var(--section-heading-width);
+	text-align: center;
+}
+
+.section-heading p:last-child {
+	color: var(--color-muted);
+}
+
+/* ===== Servizi ===== */
+
+.services {
+	background: linear-gradient(180deg, var(--color-mint), var(--color-sage));
+}
+
+/* Dispone le card servizi su una griglia a colonne. */
+.service-grid {
+	display: grid;
+	grid-template-columns: repeat(var(--grid-services-columns), minmax(var(--space-zero), 1fr));
+	gap: var(--space-2xl);
+}
+
+/* ===== Consegna ===== */
+
+/* Usa flex per separare titolo e testo della consegna. */
+.delivery {
+	display: flex;
+	align-items: center;
+	gap: var(--space-delivery-gap);
+	background:
+		linear-gradient(
+			90deg,
+			var(--color-delivery-start),
+			var(--color-delivery-end)
+		),
+		var(--color-primary-dark);
+	padding: var(--space-delivery-y) var(--space-page);
+	color: var(--color-white);
+}
+
+.delivery > div {
+	flex: 0 1 var(--layout-delivery-title-size);
+}
+
+.delivery > p {
+	flex: 1 1 var(--space-zero);
+	/* Migliora la leggibilita del testo lungo anche su schermi ampi. */
+	max-width: var(--readable-line-width);
+}
+
+.delivery .eyebrow {
+	color: var(--color-blush);
+}
+
+.delivery h2 {
+	margin-bottom: var(--space-zero);
+}
+
+.delivery p:last-child {
+	font-size: var(--font-size-delivery-copy);
+}
+
+/* ===== Gallery ===== */
+
+/* Organizza le immagini della gallery in quattro colonne. */
+.gallery-grid {
+	display: grid;
+	grid-template-columns: repeat(var(--grid-gallery-columns), minmax(var(--space-zero), 1fr));
+	gap: var(--space-lg);
+}
+
+.gallery-grid img {
+	border: var(--border-frame) solid var(--color-white);
+	border-radius: var(--radius-arch);
+	aspect-ratio: var(--image-square-ratio);
+	width: var(--full-width);
+	object-fit: cover;
+}
+
+/* ===== Contatti ===== */
+
+/* Divide testo informativo e form con flex. */
+.contact {
+	display: flex;
+	align-items: start;
+	gap: var(--space-6xl);
+}
+
+.contact-info {
+	flex: 0 1 var(--layout-delivery-title-size);
+}
+
+.contact-form {
+	flex: 1 1 var(--space-zero);
+}
+
+.contact-info p {
+	color: var(--color-muted);
+}
+
+/* Impila i dati di contatto senza punti elenco. */
+.contact-list {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-sm);
+	margin-top: var(--space-3xl);
+	list-style: none;
+}
+
+/* ===== Footer ===== */
+
+/* Organizza il footer con flex tra informazioni e link rapidi. */
+.site-footer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: var(--space-xl);
+	background: var(--color-primary-dark);
+	padding: var(--space-footer) var(--space-page);
+	color: var(--color-white);
+}
+
+.site-footer h2 {
+	margin-bottom: var(--space-xs);
+	font-size: var(--font-size-footer-title);
+}
+
+/* Dispone i link del footer in riga. */
+.site-footer div:nth-child(2) {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--space-footer-links);
+}
+
+.site-footer a:hover {
+	color: var(--color-blush);
+}
+
+/* Fa occupare al copyright tutta la larghezza del footer. */
+.copyright {
+	flex-basis: var(--full-width);
+	color: var(--color-footer-text-muted);
+}
+
+/* ===== Responsive tablet ===== */
+
+/* Adatta layout complessi a una sola colonna sotto i 900px. */
+@media (max-width: 900px) {
+	.split,
+	.delivery,
+	.contact,
+	.site-footer {
+		flex-direction: column;
+	}
+
+	.delivery > div,
+	.delivery > p,
+	.contact-info,
+	.contact-form {
+		flex-basis: auto;
+		width: var(--full-width);
+	}
+
+	/* Trasforma l'header in colonna centrata. */
+	.site-header {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	/* Mantiene il menu centrato quando va a capo. */
+	.main-nav {
+		justify-content: center;
+	}
+
+	/* Riduce servizi e gallery a due colonne. */
+	.service-grid,
+	.gallery-grid {
+		grid-template-columns: repeat(var(--grid-tablet-columns), minmax(var(--space-zero), 1fr));
+	}
+
+	.split img {
+		height: var(--image-tablet-height);
+	}
+}
+
+/* ===== Responsive mobile ===== */
+
+/* Ottimizza spaziature e griglie sotto i 620px. */
+@media (max-width: 620px) {
+	.hero {
+		padding-top: var(--space-mobile-hero-top);
+		min-height: var(--hero-min-height-mobile);
+	}
+
+	.section {
+		padding: var(--space-mobile-section) var(--space-page-mobile);
+	}
+
+	/* Porta griglie e form a una sola colonna. */
+	.service-grid,
+	.gallery-grid,
+	.contact-form {
+		grid-template-columns: var(--layout-single-column);
+	}
+
+	.button {
+		width: var(--full-width);
+	}
+}
