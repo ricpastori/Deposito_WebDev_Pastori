@@ -172,7 +172,10 @@ textarea {
 /* Organizza il form in griglia responsive. */
 .contact-form {
 	display: grid;
-	grid-template-columns: repeat(var(--grid-tablet-columns), minmax(var(--space-zero), 1fr));
+	grid-template-columns: repeat(
+			var(--grid-tablet-columns),
+			minmax(var(--space-zero), 1fr)
+		);
 	gap: var(--space-lg);
 	box-shadow: var(--shadow-soft);
 	border: var(--border-thin) solid var(--color-border);
@@ -216,7 +219,6 @@ textarea {
 
 .footer-logo {
 	margin-bottom: var(--space-md);
-	background-color: var(--color-white);
 	width: var(--logo-footer-width);
 	height: var(--logo-footer-height);
 }
