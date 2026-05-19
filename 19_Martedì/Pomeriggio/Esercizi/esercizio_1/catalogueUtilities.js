@@ -14,12 +14,18 @@ export function addNewProduct(catalogue) {
 		"number",
 		"Quanto pezzi vuoi inserire nel magazzino? ",
 	);
+	let productAvailablility = false;
+
+	if (productQuantity > 0) {
+		productAvailablility = true;
+	}
 
 	// Organizza i dati raccolti in un oggetto prodotto.
 	const newProduct = {
 		name: productName,
 		prize: productPrize,
 		quantity: productQuantity,
+		availability: productAvailablility,
 	};
 
 	// Aggiunge il nuovo prodotto al catalogo ricevuto come parametro.
@@ -60,9 +66,10 @@ function availableProducts(catalogue) {
 	if (catalogue.isEmpty) {
 		console.log("Il catalogo è vuoto");
 	} else {
+		// Raccoglie solo i prodotti segnati come disponibili.
 		const availables = [];
 		catalogue.forEach((product) => {
-			if (product.quantity > 0) {
+			if (product.availability === true) {
 				availables.push(product.name);
 			}
 		});
@@ -75,6 +82,7 @@ function findMostExpensiveProduct(catalogue) {
 	if (catalogue.length < 1) {
 		console.log("Il catalogo è vuoto");
 	} else if (catalogue.length === 1) {
+		// Con un solo prodotto, quello è automaticamente il più costoso.
 		return catalogue[0].name;
 	} else {
 		let mostExpensiveProduct = catalogue[0].name;
@@ -111,6 +119,7 @@ function tryPrompt(type, message) {
 	// Continua a chiedere l'input finché l'utente non inserisce un valore valido.
 	let validRequest = false;
 	do {
+		// Legge il valore digitato dall'utente per la richiesta corrente.
 		const input = prompt(message);
 
 		// Cambia la validazione in base al tipo di dato richiesto.
