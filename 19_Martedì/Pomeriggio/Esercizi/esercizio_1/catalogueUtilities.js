@@ -79,7 +79,7 @@ function availableProducts(catalogue) {
 
 function findMostExpensiveProduct(catalogue) {
 	// Parte dal primo prodotto e aggiorna il risultato quando trova un prezzo maggiore.
-	if (catalogue.length < 1) {
+	if (catalogue.isEmpty) {
 		console.log("Il catalogo è vuoto");
 	} else if (catalogue.length === 1) {
 		// Con un solo prodotto, quello è automaticamente il più costoso.
