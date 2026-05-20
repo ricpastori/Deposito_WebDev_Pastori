@@ -34,6 +34,8 @@ function createItem(itemName) {
 	visibilityButton.classList.add("visibility-button");
 	visibilityButton.innerText = "👀";
 
+	// Sistemare i 2 eventListener altrimenti quello su itemCard è come se nascondesse quello di visibilityButton
+
 	visibilityButton.addEventListener("click", () => {
 		if (itemBody.style.visibility === "hidden") {
 			itemBody.style.visibility = "visible";
@@ -75,7 +77,6 @@ function randomIntroStyle() {
 	];
 
 	/* Per il random del colore mi sono fatto aiutare dall'AI perché mi ricordavo una cosa del genere ma chiaramente non bene, soprattutto il valore necessario per fare correttamente il codice hex */
-
 	textContainer.style.backgroundColor = `#${Math.floor(
 		Math.random() * 16777215,
 	).toString(16)}`;

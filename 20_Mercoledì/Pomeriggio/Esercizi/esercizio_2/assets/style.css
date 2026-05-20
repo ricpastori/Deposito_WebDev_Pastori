@@ -1,0 +1,76 @@
+/* Alcune classi e alcune proprietà le ho fatte fare all'AI. Ho fatto il layout e poi non avevo voglia di scegliere i colori */
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	background: #f4f7fb;
+	min-height: 100vh;
+	color: #1f2933;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+	box-shadow: 0 12px 30px rgba(31, 41, 51, 0.12);
+	border: 1px solid #d9e2ec;
+	border-radius: 8px;
+	background: #ffffff;
+	padding: 32px;
+	/* min() sceglie il valore piu piccolo: 90% su schermi stretti, massimo 520px su schermi grandi. */
+	width: min(90%, 520px);
+	text-align: center;
+}
+
+h1 {
+	margin: 0 0 24px;
+	font-size: 2rem;
+}
+
+button {
+	border: 0;
+	border-radius: 6px;
+	background: #2563eb;
+	padding: 12px 20px;
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 1rem;
+}
+
+button:hover {
+	background: #1d4ed8;
+}
+
+button:disabled {
+	cursor: not-allowed;
+	background: #8da2c0;
+}
+
+.output {
+	margin-top: 24px;
+	border: 2px solid #bcccdc;
+	border-radius: 8px;
+	background: #f8fafc;
+	padding: 20px;
+	min-height: 120px;
+	line-height: 1.6;
+	text-align: left;
+}
+
+.loading {
+	border-color: #f59e0b;
+	background: #fff7ed;
+	color: #92400e;
+}
+
+.success {
+	border-color: #16a34a;
+	background: #f0fdf4;
+	color: #166534;
+}
+
+.error {
+	border-color: #dc2626;
+	background: #fef2f2;
+	color: #991b1b;
+}
