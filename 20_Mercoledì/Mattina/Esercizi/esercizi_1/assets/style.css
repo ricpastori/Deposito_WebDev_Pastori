@@ -1,0 +1,160 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	display: grid;
+	grid-template-columns: 280px 1fr;
+	margin: 0;
+	background: #f4f6f8;
+	min-height: 100vh;
+	color: #1f2933;
+	font-family: Arial, sans-serif;
+}
+
+.sidebar {
+	display: flex;
+	flex-direction: column;
+	border-right: 1px solid #d9e2ec;
+	background: #ffffff;
+	padding: 24px;
+	min-height: 100vh;
+	line-height: 1.5;
+}
+
+.sidebar-title {
+	margin-top: 0;
+	margin-bottom: 8px;
+	color: #102a43;
+	font-size: 26px;
+	line-height: 1.15;
+	font-weight: 700;
+}
+
+.control-panel,
+.info-panel {
+	margin-top: 24px;
+}
+
+.sidebar-info {
+	margin: 0;
+	color: #627d98;
+	font-size: 14px;
+}
+
+.control-title {
+	margin: 0 0 6px;
+	color: #243b53;
+	font-size: 16px;
+	line-height: 1.3;
+	font-weight: 700;
+}
+
+.counter-text {
+	margin: 0;
+	color: #486581;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+#list-count {
+	color: #102a43;
+	font-weight: 700;
+}
+
+input,
+button {
+	margin-top: 10px;
+	border-radius: 6px;
+	padding: 10px 12px;
+	width: 100%;
+	font: inherit;
+}
+
+input {
+	border: 1px solid #bcccdc;
+}
+
+.primary-button,
+.secondary-button {
+	cursor: pointer;
+	border: 0;
+	background: #2563eb;
+	color: white;
+}
+
+.primary-button:hover,
+.secondary-button:hover {
+	background: #1d4ed8;
+}
+
+#clear-panel {
+	margin-top: auto;
+}
+
+.secondary-button {
+	background: #7f1d1d;
+}
+
+.secondary-button:hover {
+	background: #5f1515;
+}
+
+.main-content {
+	overflow-x: auto;
+	padding: 24px;
+}
+
+.lists-layout {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(280px, 1fr));
+	gap: 24px;
+	min-width: 0;
+}
+
+.list-section {
+	min-width: 0;
+}
+
+.list-title {
+	margin-top: 0;
+}
+
+.task-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+	gap: 16px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.task-list li {
+	box-shadow: 0 6px 18px rgba(31, 41, 51, 0.08);
+	border: 1px solid #d9e2ec;
+	border-radius: 8px;
+	background: #ffffff;
+	padding: 18px;
+	min-height: 110px;
+}
+
+@media (max-width: 700px) {
+	body {
+		grid-template-columns: 1fr;
+	}
+
+	aside {
+		border-right: 0;
+		border-bottom: 1px solid #d9e2ec;
+		min-height: auto;
+	}
+
+	.main-content {
+		padding: 16px;
+	}
+
+	.lists-layout {
+		grid-template-columns: repeat(2, 300px);
+		min-width: 624px;
+	}
+}

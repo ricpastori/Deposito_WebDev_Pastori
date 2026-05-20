@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esercizio - DOM Manipulation</title>
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body id="app">
+  <aside id="sidebar" class="sidebar">
+    <h1 class="sidebar-title">Esercizio - DOM Manipulation</h1>
+    <p id="sidebar-info" class="sidebar-info"></p>
+    <div id="add-task-panel" class="control-panel">
+      <h3 class="control-title">Aggiungi attività alla lista</h3>
+      <input id="activity-input" class="activity-input" type="text" name="activity" placeholder="Inserisci nome dell'attività">
+      <button id="add-activity-button" class="primary-button" type="submit">Aggiungi attività</button>
+    </div>
+    <div id="counter-panel" class="info-panel">
+      <p class="counter-text">Elementi presenti nella lista: <span id="list-count">0</span></p>
+    </div>
+    <div id="clear-panel" class="control-panel">
+      <button id="clear-list-button" class="secondary-button" type="button">Svuota lista</button>
+    </div>
+  </aside>
+  <main id="main-content" class="main-content">
+    <div id="lists-layout" class="lists-layout">
+      <section id="todo-section" class="list-section">
+        <h2 class="list-title">To do</h2>
+        <ul id="todo-list" class="task-list todo-list"></ul>
+      </section>
+      <section id="completed-section" class="list-section">
+        <h2 class="list-title">Completate</h2>
+        <ul id="completed-list" class="task-list completed-list"></ul>
+      </section>
+    </div>
+  </main>
+
+    <!-- Collegamento file JS -->
+  <script src="./assets/script.js"></script>
+</body>
+</html>
