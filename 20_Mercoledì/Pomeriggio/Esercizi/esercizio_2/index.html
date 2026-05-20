@@ -24,6 +24,27 @@
     </section>
   </main>
 
+  <!-- Modale per inserire i dati dell'utente -->
+  <dialog id="user-modal" class="modal">
+    <form id="user-form" class="modal-content">
+      <h2 id="modal-title">Inserisci dati utente</h2>
+
+      <label for="user-name">Nome</label>
+      <input id="user-name" name="nome" type="text" placeholder="Mario Rossi" required>
+
+      <label for="user-role">Ruolo</label>
+      <input id="user-role" name="ruolo" type="text" placeholder="Sviluppatore" required>
+
+      <label for="user-status">Stato</label>
+      <input id="user-status" name="stato" type="text" placeholder="Online" required>
+
+      <div class="modal-actions">
+        <button id="close-modal" type="button" class="secondary-button">Annulla</button>
+        <button type="submit">Conferma</button>
+      </div>
+    </form>
+  </dialog>
+
   <!-- Collegamento allo script JavaScript -->
   <script src="./assets/script.js"></script>
 </body>
