@@ -1,0 +1,55 @@
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Manipolazione CSS con JS</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    
+</head>
+<body>
+
+    <!-- Sezione introduzione -->
+    <section class="intro-section">
+        <!-- Titolo principale -->
+        <h1 id="main-title" class="page-title">Esercizio manipolazione CSS</h1>
+
+        <!-- Testo modificabile -->
+        <div id="editable-text" class="text-box">
+            <p>Tempor excepteur anim id incididunt aliquip ullamco labore enim commodo ex exercitation quis. Voluptate exercitation ullamco eu incididunt excepteur ex sint et commodo. Culpa labore proident dolore velit sunt aliqua. Culpa tempor ea quis enim quis fugiat amet magna magna consectetur consequat mollit. Ea ipsum ea labore culpa dolore deserunt sint tempor aliqua ad irure cillum et enim. Cupidatat do labore anim eu exercitation pariatur.</p>
+        </div>
+    </section>
+
+    <!-- Contenuto principale -->
+    <main class="page-content">
+
+        <!-- Sezione controlli -->
+        <aside class="controls">
+            <h2>Controlli</h2>
+
+            <!-- Controllo per aggiungere elementi alla lista -->
+            <div class="control-group">
+                <h3>Aggiungi un elemento</h3>
+                <input id="list-input" class="text-input" type="text" placeholder="Scrivi un elemento">
+                <button id="add-button" class="button" type="button">Aggiungi nuovo</button>
+                <button id="remove-button" class="button" type="button">Elimina ultimo</button>
+            </div>
+
+            <!-- Controlli per modificare pagina -->
+            <div class="control-group">
+                <h3>Cambia stile all'introduzione</h3>
+                <button id="style-button" class="button" type="button">Randomizza stile</button>
+                <button id="reset-button" class="button" type="button">Reset</button>
+            </div>
+        </aside>
+
+        <!-- Sezione lista -->
+        <section class="list-section">
+            <ul id="items-list" class="items-list"></ul>
+        </section>
+    </main>
+
+    <script src="./assets/script.js"></script>
+
+</body>
+</html>
