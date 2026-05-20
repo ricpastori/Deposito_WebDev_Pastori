@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Esercizio - DOM Manipulation</title>
+  <title>Lista attività</title>
   <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body id="app">
   <aside id="sidebar" class="sidebar">
-    <h1 class="sidebar-title">Esercizio - DOM Manipulation</h1>
-    <p id="sidebar-info" class="sidebar-info"></p>
+    <h1 class="sidebar-title">Lista attività</h1>
+    <p id="sidebar-info" class="sidebar-info">Aggiungi, sposta e cancella le attività della giornata.</p>
     <div id="add-task-panel" class="control-panel">
-      <h3 class="control-title">Aggiungi attività alla lista</h3>
+      <h3 class="control-title">Nuova attività</h3>
       <input id="activity-input" class="activity-input" type="text" name="activity" placeholder="Inserisci nome dell'attività">
       <button id="add-activity-button" class="primary-button" type="submit">Aggiungi attività</button>
     </div>
     <div id="counter-panel" class="info-panel">
-      <p class="counter-text">Elementi presenti nella lista: <span id="list-count">0</span></p>
+      <p class="counter-text">Attività presenti: <span id="list-count">0</span></p>
     </div>
-    <div id="clear-panel" class="control-panel">
+    <div id="clear-panel">
       <button id="clear-list-button" class="secondary-button" type="button">Svuota lista</button>
     </div>
   </aside>

@@ -6,7 +6,7 @@ body {
 	display: grid;
 	grid-template-columns: 280px 1fr;
 	margin: 0;
-	background: #f4f6f8;
+	background: #eef2f7;
 	min-height: 100vh;
 	color: #1f2933;
 	font-family: Arial, sans-serif;
@@ -24,16 +24,23 @@ body {
 
 .sidebar-title {
 	margin-top: 0;
-	margin-bottom: 8px;
+	margin-bottom: 10px;
 	color: #102a43;
-	font-size: 26px;
-	line-height: 1.15;
 	font-weight: 700;
+	font-size: 30px;
+	line-height: 1.15;
 }
 
 .control-panel,
 .info-panel {
 	margin-top: 24px;
+}
+
+.control-panel {
+	border: 1px solid #e5eaf0;
+	border-radius: 10px;
+	background: #f8fafc;
+	padding: 16px;
 }
 
 .sidebar-info {
@@ -45,16 +52,16 @@ body {
 .control-title {
 	margin: 0 0 6px;
 	color: #243b53;
+	font-weight: 700;
 	font-size: 16px;
 	line-height: 1.3;
-	font-weight: 700;
 }
 
 .counter-text {
 	margin: 0;
 	color: #486581;
-	font-size: 14px;
 	font-weight: 500;
+	font-size: 14px;
 }
 
 #list-count {
@@ -73,18 +80,24 @@ button {
 
 input {
 	border: 1px solid #bcccdc;
+	background: #ffffff;
 }
 
 .primary-button,
 .secondary-button {
+	transition:
+		background 0.2s ease,
+		transform 0.2s ease;
 	cursor: pointer;
 	border: 0;
 	background: #2563eb;
 	color: white;
+	font-weight: 700;
 }
 
 .primary-button:hover,
 .secondary-button:hover {
+	transform: translateY(-1px);
 	background: #1d4ed8;
 }
 
@@ -101,8 +114,8 @@ input {
 }
 
 .main-content {
+	padding: 32px;
 	overflow-x: auto;
-	padding: 24px;
 }
 
 .lists-layout {
@@ -113,11 +126,17 @@ input {
 }
 
 .list-section {
+	border: 1px solid #d9e2ec;
+	border-radius: 12px;
+	background: rgba(255, 255, 255, 0.7);
+	padding: 18px;
 	min-width: 0;
 }
 
 .list-title {
-	margin-top: 0;
+	margin: 0 0 16px;
+	color: #102a43;
+	font-size: 22px;
 }
 
 .task-list {
@@ -129,13 +148,69 @@ input {
 	list-style: none;
 }
 
-.task-list li {
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease;
 	box-shadow: 0 6px 18px rgba(31, 41, 51, 0.08);
-	border: 1px solid #d9e2ec;
 	border-radius: 8px;
-	background: #ffffff;
 	padding: 18px;
 	min-height: 110px;
+}
+
+.card:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 10px 24px rgba(31, 41, 51, 0.12);
+}
+
+.todo-card {
+	border: 1px solid #93c5fd;
+	background: #eff6ff;
+}
+
+.todo-card.completed-card {
+	border: 1px solid #86efac;
+	background: #f0fdf4;
+}
+
+.activity-body p {
+	margin: 0;
+	font-weight: 700;
+}
+
+.activity-header {
+	display: flex;
+	gap: 10px;
+	margin-top: 18px;
+}
+
+.move-activity-button,
+.remove-activity-button {
+	transition: background 0.2s ease;
+	cursor: pointer;
+	margin-top: 0;
+	border: 0;
+	color: #ffffff;
+	font-weight: 700;
+}
+
+.move-activity-button {
+	background: #166534;
+}
+
+.move-activity-button:hover {
+	background: #14532d;
+}
+
+.remove-activity-button {
+	background: #7f1d1d;
+}
+
+.remove-activity-button:hover {
+	background: #5f1515;
 }
 
 @media (max-width: 700px) {
