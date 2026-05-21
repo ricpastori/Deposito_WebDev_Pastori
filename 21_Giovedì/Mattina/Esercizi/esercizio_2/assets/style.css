@@ -187,8 +187,9 @@ button {
 }
 
 .books-grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	display: flex;
+	flex-direction: column nowrap;
+	align-items: center;
 	gap: var(--space-lg);
 }
 
@@ -199,6 +200,7 @@ button {
 	border-radius: var(--radius-md);
 	background: var(--color-surface);
 	padding: var(--space-lg);
+	width: 100%;
 	color: var(--color-muted);
 }
 
@@ -308,6 +310,25 @@ button {
 	color: var(--color-surface);
 }
 
+/* Dialog messages */
+.dialog-message {
+	place-items: center;
+	min-height: 220px;
+	text-align: center;
+}
+
+.dialog-message h2 {
+	margin: 0;
+}
+
+.dialog-message.success h2 {
+	color: var(--color-secondary-dark);
+}
+
+.dialog-message.error h2 {
+	color: var(--color-primary-dark);
+}
+
 /* Form */
 .book-form {
 	display: grid;
@@ -351,8 +372,10 @@ button {
 }
 
 /* Responsive */
-@media (max-width: 720px) {
+@media screen and (max-width: 720px) {
 	.header-content {
+		/* Serve come riferimento per posizionare il menu a discesa sotto al bottone hamburger. */
+		position: relative;
 		flex-wrap: wrap;
 		gap: var(--space-sm);
 		padding: var(--space-sm) 0;
@@ -366,14 +389,23 @@ button {
 	}
 
 	.main-nav {
+		/* Su mobile il menu resta nascosto finché JavaScript non aggiunge la classe is-open. */
 		display: none;
+		position: absolute;
+		top: calc(100% + var(--space-sm));
+		right: 0;
 		flex-direction: column;
 		align-items: stretch;
-		padding-bottom: var(--space-sm);
-		width: 100%;
+		box-shadow: var(--shadow-card);
+		border: 1px solid rgba(255, 250, 242, 0.25);
+		border-radius: var(--radius-md);
+		background: var(--color-primary-dark);
+		padding: var(--space-sm);
+		width: min(260px, 100%);
 	}
 
 	.main-nav.is-open {
+		/* Classe usata da JavaScript per aprire il menu a discesa. */
 		display: flex;
 	}
 

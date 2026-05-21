@@ -23,13 +23,13 @@
 - [x] Rendere obbligatori i campi richiesti.
 
 ## JavaScript
-- [ ] Selezionare gli elementi del DOM necessari.
-- [ ] Gestire l'invio del form.
-- [ ] Bloccare il refresh della pagina con `preventDefault()`.
+- [x] Selezionare gli elementi del DOM necessari.
+- [x] Gestire l'invio del form.
+- [x] Bloccare il refresh della pagina con `preventDefault()`.
 - [ ] Recuperare i valori degli input con `.value`.
-- [ ] Creare dinamicamente una card per ogni libro inserito.
-- [ ] Aggiungere ogni card nel contenitore dei libri.
-- [ ] Svuotare il form dopo l'inserimento.
+- [x] Creare dinamicamente una card per ogni libro inserito.
+- [x] Aggiungere ogni card nel contenitore dei libri.
+- [x] Svuotare il form dopo l'inserimento.
 - [ ] Mostrare e nascondere il menu mobile con `classList.toggle()`.
 
 ## CSS
@@ -48,8 +48,8 @@
 - [x] Verificare che form, testi e pulsanti restino facili da usare su mobile.
 
 ## Controlli finali
-- [ ] Verificare che il form aggiunga correttamente una nuova card.
-- [ ] Verificare che il form venga svuotato dopo l'invio.
-- [ ] Verificare che il menu hamburger funzioni.
+- [x] Verificare che il form aggiunga correttamente una nuova card.
+- [x] Verificare che il form venga svuotato dopo l'invio.
+- [x] Verificare che il menu hamburger funzioni.
 - [x] Verificare che la pagina sia usabile da desktop.
 - [x] Verificare che la pagina sia usabile da mobile.

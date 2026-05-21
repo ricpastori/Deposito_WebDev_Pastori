@@ -14,14 +14,16 @@
     <div class="header-content">
       <h1 class="site-title">Libreria Digitale</h1>
 
-      <button class="menu-button" id="menu-button" type="button" aria-label="Apri menu di navigazione">
+      <!-- Bottone hamburger: aria-expanded viene aggiornato da JavaScript quando il menu si apre o si chiude. -->
+      <button class="menu-button" id="menu-button" type="button" aria-label="Apri menu di navigazione" aria-controls="main-nav" aria-expanded="false">
         ☰
       </button>
 
+      <!-- Menu di navigazione: su mobile parte nascosto e viene mostrato aggiungendo la classe is-open. -->
       <nav class="main-nav" id="main-nav" aria-label="Navigazione principale">
         <a class="nav-link" href="#introduction">Introduzione</a>
         <a class="nav-link" href="#instructions">Istruzioni</a>
-        <a class="nav-link" href="#book-list">Lista libri</a>
+        <a class="nav-link" href="#book-container">Lista libri</a>
       </nav>
     </div>
   </header>
@@ -58,7 +60,7 @@
     </section>
 
     <!-- Books list section -->
-    <section class="books-section" id="book-list">
+    <section class="books-section" id="book-container">
       <div class="section-content">
         <div class="section-heading">
           <h2>Lista libri</h2>
@@ -67,7 +69,7 @@
           </button>
         </div>
 
-        <div class="books-grid" id="books-container">
+        <div class="books-grid" id="books-list">
           <p class="empty-message" id="empty-message">
             Non hai ancora inserito libri. Aggiungi il primo volume alla tua libreria.
           </p>
@@ -82,7 +84,7 @@
       <!-- Form heading -->
       <div class="dialog-heading">
         <h2>Aggiungi un libro</h2>
-        <button class="close-button" id="close-dialog-button" type="button" aria-label="Chiudi form">
+        <button class="close-button close-dialog-button" type="button" aria-label="Chiudi form">
           ×
         </button>
       </div>
@@ -115,7 +117,7 @@
 
       <!-- Form actions -->
       <div class="form-actions">
-        <button class="secondary-button" id="cancel-dialog-button" type="button">
+        <button class="secondary-button close-dialog-button" type="button">
           Annulla
         </button>
         <button class="primary-button" type="submit">
