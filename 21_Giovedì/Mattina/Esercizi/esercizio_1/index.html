@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pagina web per simulare la gestione degli animali presenti in uno zoo.">
+    <meta name="author" content="Riccardo Pastori">
+    <title>Zoo Virtuale</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body class="test">
+    <main class="container">
+        <!-- Intro -->
+        <h1 id="zoo-title">Zoo Natura Viva</h1>
+
+        <p id="zoo-description" class="description">
+            Gestisci gli animali dello zoo aggiungendo nuove card o rimuovendo l'ultimo animale inserito.
+        </p>
+
+         <!-- Pulsanti -->
+        <div class="actions">
+            <button id="add-lion" class="button" type="button">Aggiungi leone</button>
+            <button id="add-elephant" class="button" type="button">Aggiungi elefante</button>
+            <button id="remove-animal" class="button" type="button">Rimuovi ultimo animale</button>
+            <button id="change-theme" class="button" type="button">Cambia tema dello zoo</button>
+        </div>
+
+        <!-- Lista animali -->
+        <section id="animal-list" class="animal-list">
+            <article class="animal-card giraffe">
+                <span class="animal-emoji">🦒</span>
+                <div class="animal-content">
+                    <h2>Giraffa</h2>
+                    <p>Un animale elegante dal collo lunghissimo.</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <script src="./assets/script.js"></script>
+</body>
+</html>

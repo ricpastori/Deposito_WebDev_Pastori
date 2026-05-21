@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Riccardo Pastori">
+  <meta name="description" content="Pagina web per registrare libri e visualizzarli in una libreria digitale con card dinamiche.">
+  <title>Libreria Digitale</title>
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+  <!-- Header and navigation -->
+  <header class="site-header">
+    <div class="header-content">
+      <h1 class="site-title">Libreria Digitale</h1>
+
+      <button class="menu-button" id="menu-button" type="button" aria-label="Apri menu di navigazione">
+        ☰
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Navigazione principale">
+        <a class="nav-link" href="#introduction">Introduzione</a>
+        <a class="nav-link" href="#instructions">Istruzioni</a>
+        <a class="nav-link" href="#book-list">Lista libri</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="page-content">
+    <!-- Introduction section -->
+    <section class="intro-section" id="introduction">
+      <div class="section-content">
+        <h2>La tua piccola libreria online</h2>
+        <p>
+          Registra i libri che vuoi ricordare e visualizzali in una lista di card dinamiche.
+          Per ogni libro puoi indicare titolo, autore, genere, anno di pubblicazione e una breve descrizione.
+        </p>
+
+        <button class="primary-button add-book-button" type="button">
+          Aggiungi un libro
+        </button>
+      </div>
+    </section>
+
+    <!-- Instructions section -->
+    <section class="instructions-section" id="instructions">
+      <div class="section-content">
+        <h2>Istruzioni</h2>
+        <ol class="instructions-list">
+          <li>Premi il pulsante "Aggiungi un libro" per aprire il form.</li>
+          <li>Compila tutti i campi richiesti con le informazioni del libro.</li>
+          <li>Invia il form per creare una nuova card nella lista.</li>
+          <li>Usa il menu di navigazione per spostarti tra le sezioni della pagina.</li>
+          <li>Su smartphone, apri e chiudi il menu con il pulsante hamburger.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Books list section -->
+    <section class="books-section" id="book-list">
+      <div class="section-content">
+        <div class="section-heading">
+          <h2>Lista libri</h2>
+          <button class="secondary-button add-book-button" type="button">
+            Nuovo libro
+          </button>
+        </div>
+
+        <div class="books-grid" id="books-container">
+          <p class="empty-message" id="empty-message">
+            Non hai ancora inserito libri. Aggiungi il primo volume alla tua libreria.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Add book dialog -->
+  <dialog class="book-dialog" id="book-dialog">
+    <form class="book-form" id="book-form">
+      <!-- Form heading -->
+      <div class="dialog-heading">
+        <h2>Aggiungi un libro</h2>
+        <button class="close-button" id="close-dialog-button" type="button" aria-label="Chiudi form">
+          ×
+        </button>
+      </div>
+
+      <!-- Book information fields -->
+      <label class="form-field" for="book-title">
+        Titolo del libro
+        <input type="text" id="book-title" name="book-title" placeholder="Es. Il barone rampante" required>
+      </label>
+
+      <label class="form-field" for="book-author">
+        Autore
+        <input type="text" id="book-author" name="book-author" placeholder="Es. Italo Calvino" required>
+      </label>
+
+      <label class="form-field" for="book-genre">
+        Genere
+        <input type="text" id="book-genre" name="book-genre" placeholder="Es. Romanzo" required>
+      </label>
+
+      <label class="form-field" for="book-year">
+        Anno di pubblicazione
+        <input type="number" id="book-year" name="book-year" placeholder="Es. 1957" min="0" max="2026" required>
+      </label>
+
+      <label class="form-field" for="book-description">
+        Breve descrizione
+        <textarea id="book-description" name="book-description" rows="4" placeholder="Scrivi una breve nota sul libro" required></textarea>
+      </label>
+
+      <!-- Form actions -->
+      <div class="form-actions">
+        <button class="secondary-button" id="cancel-dialog-button" type="button">
+          Annulla
+        </button>
+        <button class="primary-button" type="submit">
+          Salva libro
+        </button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- JavaScript -->
+  <script src="./assets/script.js"></script>
+</body>
+</html>

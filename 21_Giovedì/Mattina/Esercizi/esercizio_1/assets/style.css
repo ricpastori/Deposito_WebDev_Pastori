@@ -1,0 +1,146 @@
+/* Default theme */
+:root {
+	--color-page-bg: #f0f7ec;
+	--color-text: #111111;
+	--color-surface: #ffffff;
+	--color-list-bg: #e3f0dc;
+	--color-border: #1f6b2a;
+	--color-title: #14551d;
+	--color-card-bg: #ffffff;
+	--color-card-border: #248232;
+	--color-card-title: #111111;
+	--shadow-list: 0 8px 16px #00000012;
+	--shadow-card: 0 4px 12px #00000020;
+	--color-lion: #b87912;
+	--color-elephant: #4f5f58;
+	--color-button: #14551d;
+	--color-button-hover: #0c3512;
+	--color-button-text: #ffffff;
+	--color-night-bg: #111111;
+	--color-night-text: #ffffff;
+}
+
+/* Brown theme */
+.new-theme {
+	--color-page-bg: #efe4d2;
+	--color-text: #22160d;
+	--color-surface: #fff8ee;
+	--color-list-bg: #ead8c0;
+	--color-border: #8a5a32;
+	--color-title: #5f3217;
+	--color-card-bg: #f8ead8;
+	--color-card-border: #9c6b3f;
+	--color-card-title: #3d2413;
+	--shadow-list: 0 8px 16px #3d24131a;
+	--shadow-card: 0 4px 12px #3d241330;
+	--color-lion: #b06a1d;
+	--color-elephant: #6f6256;
+	--color-button: #6b3f20;
+	--color-button-hover: #452513;
+	--color-button-text: #fff8ee;
+	--color-night-bg: #2b1a10;
+	--color-night-text: #fff8ee;
+}
+
+/* Reset */
+* {
+	box-sizing: border-box;
+}
+
+/* Base */
+body {
+	margin: 0;
+	background-color: var(--color-page-bg);
+	color: var(--color-text);
+	font-family: Arial, sans-serif;
+}
+
+/* Layout */
+.container {
+	margin: 40px auto;
+	border: 1px solid var(--color-border);
+	border-radius: 8px;
+	background-color: var(--color-surface);
+	padding: 24px;
+	max-width: 800px;
+}
+
+/* Intro */
+h1 {
+	margin-top: 0;
+	color: var(--color-title);
+}
+
+.description {
+	line-height: 1.5;
+}
+
+/* Animal list */
+.animal-list {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	margin: 24px 0;
+	box-shadow: var(--shadow-list);
+	border: 1px solid var(--color-border);
+	border-radius: 8px;
+	background-color: var(--color-list-bg);
+	padding: 24px;
+}
+
+.animal-card {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	box-shadow: var(--shadow-card);
+	border-left: 8px solid var(--color-card-border);
+	border-radius: 8px;
+	background-color: var(--color-card-bg);
+	padding: 16px;
+}
+
+.animal-emoji {
+	font-size: 32px;
+	line-height: 1;
+}
+
+.animal-content {
+	display: block;
+}
+
+.animal-card h2 {
+	margin: 0;
+	color: var(--color-card-title);
+}
+
+.animal-card p {
+	margin: 4px 0 0;
+}
+
+.animal-card.lion {
+	border-left-color: var(--color-lion);
+}
+
+.animal-card.elephant {
+	border-left-color: var(--color-elephant);
+}
+
+/* Actions */
+.actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+}
+
+.button {
+	cursor: pointer;
+	border: none;
+	border-radius: 8px;
+	background-color: var(--color-button);
+	padding: 12px 16px;
+	color: var(--color-button-text);
+}
+
+.button:hover {
+	background-color: var(--color-button-hover);
+}

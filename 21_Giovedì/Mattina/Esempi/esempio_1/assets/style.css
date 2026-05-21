@@ -1,0 +1,25 @@
+body {
+	background-color: #f4f4f4;
+	padding: 30px;
+	font-family: Arial, sans-serif;
+}
+
+h1 {
+	color: darkgreen;
+}
+
+#contenitore {
+	margin-top: 20px;
+	border: 1px solid #ccc;
+	background-color: white;
+	padding: 20px;
+}
+
+button {
+	cursor: pointer;
+	margin-top: 20px;
+	border: none;
+	background-color: darkgreen;
+	padding: 10px 20px;
+	color: white;
+}

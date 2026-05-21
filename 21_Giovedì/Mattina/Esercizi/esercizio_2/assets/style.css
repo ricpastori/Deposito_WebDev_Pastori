@@ -1,0 +1,404 @@
+/* Variables */
+:root {
+	--color-bg: #f7f1e8;
+	--color-surface: #fffaf2;
+	--color-surface-dark: #efe1cf;
+	--color-primary: #6f3f24;
+	--color-primary-dark: #4d2a18;
+	--color-secondary: #246a73;
+	--color-secondary-dark: #17464c;
+	--color-text: #2d241d;
+	--color-muted: #6d6259;
+	--color-border: #d7c5ad;
+	--color-shadow: rgba(67, 43, 26, 0.16);
+
+	--space-xs: 0.5rem;
+	--space-sm: 0.75rem;
+	--space-md: 1rem;
+	--space-lg: 1.5rem;
+	--space-xl: 2rem;
+	--space-xxl: 3rem;
+
+	--radius-sm: 6px;
+	--radius-md: 8px;
+	--button-size: 44px;
+	--max-width: 1024px;
+	--header-height: 72px;
+	--shadow-card: 0 12px 32px var(--color-shadow);
+	--transition-fast: 0.2s ease;
+}
+
+/* Base styles */
+* {
+	box-sizing: border-box;
+}
+
+html {
+	/* Rende fluido lo spostamento quando si cliccano i link del menu. */
+	scroll-behavior: smooth;
+	/* Lascia spazio sopra alla sezione raggiunta, così l'header sticky non copre il titolo. */
+	scroll-padding-top: calc(var(--header-height) + var(--space-md));
+}
+
+body {
+	margin: 0;
+	background: var(--color-bg);
+	min-height: 100vh;
+	color: var(--color-text);
+	line-height: 1.6;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+input,
+textarea {
+	font: inherit;
+}
+
+button {
+	cursor: pointer;
+}
+
+/* Header */
+.site-header {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	box-shadow: 0 4px 16px var(--color-shadow);
+	background: var(--color-primary);
+	min-height: var(--header-height);
+	color: var(--color-surface);
+}
+
+.header-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: var(--space-lg);
+	margin: 0 auto;
+	width: min(100% - var(--space-xl), var(--max-width));
+	min-height: var(--header-height);
+}
+
+.site-title {
+	margin: 0;
+	font-size: clamp(1.4rem, 3vw, 2rem);
+	line-height: 1.1;
+}
+
+/* Navigation */
+.menu-button {
+	display: none;
+	transition:
+		background-color var(--transition-fast),
+		transform var(--transition-fast);
+	border: 1px solid rgba(255, 250, 242, 0.45);
+	border-radius: var(--radius-sm);
+	background: transparent;
+	width: var(--button-size);
+	height: var(--button-size);
+	color: var(--color-surface);
+	font-size: 1.5rem;
+}
+
+.menu-button:hover {
+	background: rgba(255, 250, 242, 0.14);
+}
+
+.menu-button:active {
+	transform: scale(0.96);
+}
+
+.main-nav {
+	display: flex;
+	align-items: center;
+	gap: var(--space-xs);
+}
+
+.nav-link {
+	transition:
+		background-color var(--transition-fast),
+		color var(--transition-fast);
+	border-radius: var(--radius-sm);
+	padding: var(--space-xs) var(--space-sm);
+	color: var(--color-surface);
+	text-decoration: none;
+}
+
+.nav-link:hover {
+	background: var(--color-surface);
+	color: var(--color-primary-dark);
+}
+
+/* Page layout */
+.page-content {
+	margin: 0 auto;
+	/* Sottrae lo spazio laterale per evitare che il contenuto tocchi i bordi dello schermo sui dispositivi piccoli. */
+	width: min(100% - var(--space-xl), var(--max-width));
+}
+
+.intro-section,
+.instructions-section,
+.books-section {
+	padding: var(--space-xxl) 0;
+}
+
+.section-content {
+	max-width: 840px;
+}
+
+.intro-section .section-content {
+	max-width: 720px;
+}
+
+.section-content h2,
+.dialog-heading h2 {
+	margin: 0 0 var(--space-md);
+	color: var(--color-primary-dark);
+	line-height: 1.2;
+}
+
+.section-content p {
+	margin: 0 0 var(--space-lg);
+	color: var(--color-muted);
+}
+
+/* Instructions section */
+.instructions-list {
+	margin: 0;
+	padding-left: var(--space-lg);
+}
+
+.instructions-list li + li {
+	margin-top: var(--space-sm);
+}
+
+/* Books section */
+.section-heading {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: var(--space-md);
+	margin-bottom: var(--space-lg);
+}
+
+.section-heading h2 {
+	margin: 0;
+}
+
+.books-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	gap: var(--space-lg);
+}
+
+.empty-message {
+	grid-column: 1 / -1;
+	margin: 0;
+	border: 1px dashed var(--color-border);
+	border-radius: var(--radius-md);
+	background: var(--color-surface);
+	padding: var(--space-lg);
+	color: var(--color-muted);
+}
+
+.book-card {
+	box-shadow: var(--shadow-card);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-md);
+	background: var(--color-surface);
+	padding: var(--space-lg);
+}
+
+.book-card h3 {
+	margin: 0 0 var(--space-xs);
+	color: var(--color-primary-dark);
+}
+
+.book-card p {
+	margin: var(--space-xs) 0 0;
+}
+
+.book-meta {
+	color: var(--color-secondary-dark);
+	font-weight: 700;
+}
+
+/* Buttons */
+.primary-button,
+.secondary-button {
+	transition:
+		background-color var(--transition-fast),
+		color var(--transition-fast),
+		transform var(--transition-fast);
+	border: 0;
+	border-radius: var(--radius-sm);
+	padding: var(--space-sm) var(--space-lg);
+	min-height: var(--button-size);
+	font-weight: 700;
+}
+
+.primary-button {
+	background: var(--color-primary);
+	color: var(--color-surface);
+}
+
+.primary-button:hover {
+	background: var(--color-primary-dark);
+}
+
+.secondary-button {
+	border: 1px solid var(--color-border);
+	background: var(--color-surface-dark);
+	color: var(--color-secondary-dark);
+}
+
+.secondary-button:hover {
+	background: var(--color-secondary);
+	color: var(--color-surface);
+}
+
+.primary-button:active,
+.secondary-button:active {
+	transform: scale(0.98);
+}
+
+/* Dialog */
+.book-dialog {
+	box-shadow: var(--shadow-card);
+	border: 0;
+	border-radius: var(--radius-md);
+	background: var(--color-surface);
+	padding: 0;
+	width: min(92vw, 560px);
+	color: var(--color-text);
+}
+
+.book-dialog::backdrop {
+	background: rgba(45, 36, 29, 0.55);
+}
+
+.dialog-heading {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: var(--space-md);
+}
+
+.dialog-heading h2 {
+	margin: 0;
+}
+
+.close-button {
+	transition:
+		background-color var(--transition-fast),
+		color var(--transition-fast);
+	border: 0;
+	border-radius: var(--radius-sm);
+	background: var(--color-surface-dark);
+	width: 40px;
+	height: 40px;
+	color: var(--color-primary-dark);
+	font-size: 1.5rem;
+	line-height: 1;
+}
+
+.close-button:hover {
+	background: var(--color-primary);
+	color: var(--color-surface);
+}
+
+/* Form */
+.book-form {
+	display: grid;
+	gap: var(--space-md);
+	padding: var(--space-xl);
+}
+
+.form-field {
+	display: grid;
+	gap: var(--space-xs);
+	color: var(--color-primary-dark);
+	font-weight: 700;
+}
+
+.form-field input,
+.form-field textarea {
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-sm);
+	background: #ffffff;
+	padding: var(--space-sm);
+	width: 100%;
+	color: var(--color-text);
+}
+
+.form-field textarea {
+	/* Permette di allargare solo in verticale la descrizione, senza rompere il layout del form. */
+	resize: vertical;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+	outline: 3px solid rgba(36, 106, 115, 0.22);
+	border-color: var(--color-secondary);
+}
+
+.form-actions {
+	display: flex;
+	justify-content: flex-end;
+	gap: var(--space-sm);
+	margin-top: var(--space-sm);
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+	.header-content {
+		flex-wrap: wrap;
+		gap: var(--space-sm);
+		padding: var(--space-sm) 0;
+	}
+
+	.menu-button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		line-height: 0;
+	}
+
+	.main-nav {
+		display: none;
+		flex-direction: column;
+		align-items: stretch;
+		padding-bottom: var(--space-sm);
+		width: 100%;
+	}
+
+	.main-nav.is-open {
+		display: flex;
+	}
+
+	.nav-link {
+		padding: var(--space-sm);
+	}
+
+	.intro-section,
+	.instructions-section,
+	.books-section {
+		padding: var(--space-xl) 0;
+	}
+
+	.section-heading,
+	.form-actions {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.primary-button,
+	.secondary-button {
+		width: 100%;
+	}
+
+	.book-form {
+		padding: var(--space-lg);
+	}
+}
