@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!-- Metadati -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Percorso di adozione e richiesta informazioni per il centro Cuore a Zampe.">
+    <title>Come adottare | Cuore a Zampe</title>
+
+    <!-- Caricamento font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Fogli di stile -->
+    <link rel="stylesheet" href="assets/styles/theme.css">
+    <link rel="stylesheet" href="assets/styles/adoption.css">
+</head>
+<body>
+    <!-- Intestazione del sito -->
+    <header class="site-header">
+        <a class="logo" href="index.html" aria-label="Torna alla home di Cuore a Zampe">
+            <span class="logo-mark">CZ</span>
+            <span>Cuore a Zampe</span>
+        </a>
+
+        <!-- Navigazione responsive: hamburger copiato da un vecchio progetto, usa un checkbox nascosto per aprire/chiudere il menu senza JS. -->
+        <div class="header-menu">
+            <input class="menu-checkbox" type="checkbox" id="main-menu-toggle">
+            <label class="menu-toggle" for="main-menu-toggle" aria-label="Apri il menu principale">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="sr-only">Menu</span>
+            </label>
+
+            <nav id="main-menu" class="main-nav" aria-label="Menu principale">
+                <a href="index.html">Home</a>
+                <a href="dogs.html">Cani</a>
+                <a class="active" href="adoption.html">Adozione</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero della pagina -->
+        <section class="page-hero adoption-hero">
+            <div>
+                <p class="eyebrow">Percorso di adozione</p>
+                <h1>Prima si conosce, poi si decide insieme</h1>
+                <p>Un percorso chiaro protegge il cane e aiuta la famiglia a partire con il piede giusto.</p>
+            </div>
+        </section>
+
+        <!-- Sezione percorso di adozione -->
+        <section class="process-section section-block">
+            <div class="section-heading">
+                <p class="eyebrow">Metodo</p>
+                <h2>Le fasi principali</h2>
+            </div>
+
+            <!-- Passaggi del percorso -->
+            <div class="steps cards-list">
+                <article class="card">
+                    <span>1</span>
+                    <h3>Colloquio iniziale</h3>
+                    <p>Raccogliamo informazioni sulla casa, sul tempo disponibile e sull'esperienza con i cani.</p>
+                </article>
+
+                <article class="card">
+                    <span>2</span>
+                    <h3>Incontro al centro</h3>
+                    <p>Organizziamo un momento guidato con il cane più adatto al profilo della famiglia.</p>
+                </article>
+
+                <article class="card">
+                    <span>3</span>
+                    <h3>Inserimento e follow-up</h3>
+                    <p>Consegniamo consigli pratici e restiamo in contatto nelle prime settimane.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sezione contatto -->
+        <section class="contact-section section-block">
+            <!-- Introduzione al modulo -->
+            <div class="contact-copy">
+                <p class="eyebrow">Richiesta informazioni</p>
+                <h2>Raccontaci che tipo di casa puoi offrire</h2>
+                <p>
+                    Il modulo non invia dati a un server: serve come esercizio di interazione in JavaScript
+                    e mostra un messaggio di conferma direttamente nella pagina.
+                </p>
+            </div>
+
+            <!-- Modulo richiesta adozione -->
+            <form class="adoption-form card" id="adoption-form">
+                <label for="name">Nome e cognome</label>
+                <input id="name" name="name" type="text" placeholder="Es. Maria Rossi" required>
+
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="nome@email.it" required>
+
+                <label for="dog">Cane di interesse</label>
+                <select id="dog" name="dog" required>
+                    <option value="">Scegli una scheda</option>
+                    <option value="Luna">Luna</option>
+                    <option value="Rocky">Rocky</option>
+                    <option value="Milo">Milo</option>
+                    <option value="Nina">Nina</option>
+                    <option value="Argo">Argo</option>
+                    <option value="Tea">Tea</option>
+                </select>
+
+                <label for="message">Presentazione</label>
+                <textarea id="message" name="message" rows="5" placeholder="Racconta chi vive in casa, tempi e abitudini." required></textarea>
+
+                <button class="button primary" type="submit">Invia richiesta</button>
+                <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer del sito -->
+    <footer class="site-footer">
+        <!-- Navigazione e contatti nel footer -->
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a class="footer-logo" href="index.html" aria-label="Torna alla home di Cuore a Zampe">
+                    <span class="logo-mark">CZ</span>
+                    <span>Cuore a Zampe</span>
+                </a>
+                <p>Adozioni canine seguite con cura, ascolto e rispetto per ogni storia.</p>
+            </div>
+
+            <nav class="footer-column" aria-label="Menu footer">
+                <h2>Menu</h2>
+                <a href="index.html">Home</a>
+                <a href="dogs.html">Cani</a>
+                <a href="adoption.html">Adozione</a>
+            </nav>
+
+            <address class="footer-column">
+                <h2>Contatti</h2>
+                <p>Via dei Tigli 18, Torino</p>
+                <a href="mailto:info@cuoreazampe.it">info@cuoreazampe.it</a>
+                <a href="tel:+390110000000">011 000 0000</a>
+            </address>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 Cuore a Zampe. Tutti i diritti riservati.</p>
+            <p>Adozioni consapevoli, una famiglia alla volta.</p>
+        </div>
+    </footer>
+
+    <!-- Script della pagina -->
+    <script src="assets/scripts/adoption.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+/* Hero home */
+.hero {
+	/* linear-gradient() crea un overlay sopra la foto per rendere leggibile il testo. */
+	background:
+		linear-gradient(90deg, rgba(12, 30, 26, 0.84), rgba(12, 30, 26, 0.28)),
+		url("https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&w=1800&q=80")
+		center / cover;
+	padding: clamp(64px, 10vw, 120px) var(--page-padding-inline);
+	min-height: 78vh;
+}
+
+.hero-content {
+	max-width: var(--layout-max-hero-content);
+}
+
+/* Card servizi */
+.feature-card {
+	padding: 28px;
+}
+
+/* Banda in evidenza */
+.highlight-band {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: var(--space-6xl);
+	background: var(--color-primary-dark);
+	color: var(--color-white);
+}
+
+.highlight-text {
+	flex: 1 1 420px;
+	max-width: var(--layout-max-section-heading);
+}
+
+/* Statistiche centro */
+.quick-stats {
+	display: flex;
+	flex: 1 1 360px;
+	flex-wrap: wrap;
+	gap: 16px;
+}
+
+.quick-stats div {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 152px;
+	justify-content: center;
+	border: 1px solid rgba(255, 255, 255, 0.25);
+	border-radius: var(--radius-sm);
+	background: rgba(255, 255, 255, 0.08);
+	padding: var(--space-2xl);
+	min-height: 132px;
+}
+
+.quick-stats strong {
+	font-size: var(--type-step-5);
+	line-height: 1;
+}
+
+.quick-stats span {
+	color: var(--color-stat-text);
+}
+
+/* Responsive home */
+@media (max-width: 680px) {
+	.hero {
+		min-height: var(--hero-mobile-min-height);
+	}
+
+	.quick-stats div {
+		flex-basis: 100%;
+	}
+}

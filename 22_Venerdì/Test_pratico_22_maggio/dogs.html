@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!-- Metadati -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Schede dei cani disponibili al centro adozioni canine Cuore a Zampe.">
+    <title>I nostri cani | Cuore a Zampe</title>
+
+    <!-- Caricamento font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Fogli di stile -->
+    <link rel="stylesheet" href="assets/styles/theme.css">
+    <link rel="stylesheet" href="assets/styles/dogs.css">
+</head>
+<body>
+    <!-- Intestazione del sito -->
+    <header class="site-header">
+        <a class="logo" href="index.html" aria-label="Torna alla home di Cuore a Zampe">
+            <span class="logo-mark">CZ</span>
+            <span>Cuore a Zampe</span>
+        </a>
+
+        <!-- Navigazione responsive: hamburger copiato da un vecchio progetto, usa un checkbox nascosto per aprire/chiudere il menu senza JS. -->
+        <div class="header-menu">
+            <input class="menu-checkbox" type="checkbox" id="main-menu-toggle">
+            <label class="menu-toggle" for="main-menu-toggle" aria-label="Apri il menu principale">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="sr-only">Menu</span>
+            </label>
+
+            <nav id="main-menu" class="main-nav" aria-label="Menu principale">
+                <a href="index.html">Home</a>
+                <a class="active" href="dogs.html">Cani</a>
+                <a href="adoption.html">Adozione</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero della pagina -->
+        <section class="page-hero dogs-hero">
+            <div>
+                <p class="eyebrow">Cani adottabili</p>
+                <h1>Conosci gli ospiti del centro</h1>
+                <p>Ogni scheda contiene carattere, bisogni e contesto consigliato.</p>
+            </div>
+        </section>
+
+        <!-- Sezione catalogo cani -->
+        <section class="catalog-section section-block">
+            <div class="section-heading">
+                <p class="eyebrow">Filtra le schede</p>
+                <h2>Scegli il tipo di compagno che cerchi</h2>
+            </div>
+
+            <!-- Controlli filtro -->
+            <div class="filter-bar" aria-label="Filtro cani">
+                <button class="button filter-button active" type="button" data-filter="all">Tutti</button>
+                <button class="button filter-button" type="button" data-filter="tranquillo">Tranquilli</button>
+                <button class="button filter-button" type="button" data-filter="attivo">Attivi</button>
+                <button class="button filter-button" type="button" data-filter="cucciolo">Cuccioli</button>
+            </div>
+
+            <!-- Griglia delle schede cani -->
+            <div class="dog-grid">
+                <article class="dog-card dog-profile card" data-category="tranquillo">
+                    <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=900&q=80" alt="Luna, cane dorato seduto all'aperto">
+                    <div class="dog-card-body">
+                        <span class="tag">Tranquilla</span>
+                        <h3>Luna</h3>
+                        <p>5 anni, taglia media. Ama le passeggiate lente e le persone calme.</p>
+                        <ul>
+                            <li>Casa ideale: famiglia senza troppa confusione</li>
+                            <li>Compatibilità: adulti e ragazzi</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="dog-card dog-profile card" data-category="attivo">
+                    <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=900&q=80" alt="Rocky, cane marrone con collare">
+                    <div class="dog-card-body">
+                        <span class="tag">Attivo</span>
+                        <h3>Rocky</h3>
+                        <p>3 anni, taglia media. Ha energia da vendere e tanta voglia di imparare.</p>
+                        <ul>
+                            <li>Casa ideale: persone sportive</li>
+                            <li>Compatibilità: adulti con esperienza</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="dog-card dog-profile card" data-category="cucciolo">
+                    <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=900&q=80" alt="Milo, cucciolo chiaro in un prato">
+                    <div class="dog-card-body">
+                        <span class="tag">Cucciolo</span>
+                        <h3>Milo</h3>
+                        <p>8 mesi, taglia medio-piccola. Allegro, curioso e ancora da educare con pazienza.</p>
+                        <ul>
+                            <li>Casa ideale: famiglia presente</li>
+                            <li>Compatibilità: bambini abituati ai cani</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="dog-card dog-profile card" data-category="tranquillo">
+                    <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=900&q=80" alt="Nina, cane bianco e nero con espressione dolce">
+                    <div class="dog-card-body">
+                        <span class="tag">Tranquilla</span>
+                        <h3>Nina</h3>
+                        <p>7 anni, taglia piccola. Cerca una casa serena e una persona di riferimento.</p>
+                        <ul>
+                            <li>Casa ideale: appartamento tranquillo</li>
+                            <li>Compatibilità: adulti e anziani</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="dog-card dog-profile card" data-category="attivo">
+                    <img src="https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?auto=format&fit=crop&w=900&q=80" alt="Argo, cane felice in primo piano">
+                    <div class="dog-card-body">
+                        <span class="tag">Attivo</span>
+                        <h3>Argo</h3>
+                        <p>2 anni, taglia grande. Socievole, brillante e molto motivato dal gioco.</p>
+                        <ul>
+                            <li>Casa ideale: spazio esterno sicuro</li>
+                            <li>Compatibilità: persone dinamiche</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="dog-card dog-profile card" data-category="cucciolo">
+                    <img src="https://images.unsplash.com/photo-1591160690555-5debfba289f0?auto=format&fit=crop&w=900&q=80" alt="Tea, cucciola scura seduta">
+                    <div class="dog-card-body">
+                        <span class="tag">Cucciola</span>
+                        <h3>Tea</h3>
+                        <p>6 mesi, taglia media. Un po' timida all'inizio, poi molto affettuosa.</p>
+                        <ul>
+                            <li>Casa ideale: persone pazienti</li>
+                            <li>Compatibilità: famiglie tranquille</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer del sito -->
+    <footer class="site-footer">
+        <!-- Navigazione e contatti nel footer -->
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a class="footer-logo" href="index.html" aria-label="Torna alla home di Cuore a Zampe">
+                    <span class="logo-mark">CZ</span>
+                    <span>Cuore a Zampe</span>
+                </a>
+                <p>Adozioni canine seguite con cura, ascolto e rispetto per ogni storia.</p>
+            </div>
+
+            <nav class="footer-column" aria-label="Menu footer">
+                <h2>Menu</h2>
+                <a href="index.html">Home</a>
+                <a href="dogs.html">Cani</a>
+                <a href="adoption.html">Adozione</a>
+            </nav>
+
+            <address class="footer-column">
+                <h2>Contatti</h2>
+                <p>Via dei Tigli 18, Torino</p>
+                <a href="mailto:info@cuoreazampe.it">info@cuoreazampe.it</a>
+                <a href="tel:+390110000000">011 000 0000</a>
+            </address>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 Cuore a Zampe. Tutti i diritti riservati.</p>
+            <p>Adozioni consapevoli, una famiglia alla volta.</p>
+        </div>
+    </footer>
+
+    <!-- Script della pagina -->
+    <script src="assets/scripts/dogs.js"></script>
+</body>
+</html>
