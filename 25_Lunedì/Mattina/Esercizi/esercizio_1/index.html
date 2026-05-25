@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Dashboard gamer per creare carte giocatore, salvare preferenze nel Local Storage e cambiare tema grafico.">
+	<meta name="author" content="Riccardo Pastori">
+	<title>Dashboard Gamer</title>
+	<link rel="stylesheet" href="./assets/styles/style.css">
+	<link rel="stylesheet" href="./assets/styles/cards.css">
+</head>
+<body>
+	<!-- Header principale con titolo e cambio tema -->
+	<header class="site-header">
+		<h1>Dashboard Gamer</h1>
+		<button type="button" id="themeButton" class="btn secondary">Cambia tema</button>
+	</header>
+
+	<main class="page">
+		<!-- Sezione introduttiva -->
+		<section class="intro">
+			<p class="eyebrow">Local Storage Gamer Profile</p>
+			<h2>Profilo del videogiocatore</h2>
+			<p>
+				Salva le tue preferenze di gioco nel browser, recuperale al caricamento
+				della pagina e personalizza il tema della dashboard.
+			</p>
+		</section>
+
+		<!-- Form di creazione e anteprima della carta -->
+		<section class="profile-card">
+			<form id="playerForm" class="profile-form">
+				<div class="field">
+					<label for="playerName">Nome giocatore</label>
+					<input id="playerName" name="playerName" type="text" placeholder="Es. NovaRider" required>
+				</div>
+
+				<div class="field">
+					<label for="playerArchetype">Archetipo del giocatore</label>
+					<select id="playerArchetype" name="playerArchetype" required>
+						<option value="">Scegli archetipo</option>
+						<option value="Stratega">Stratega</option>
+						<option value="Tank">Tank</option>
+						<option value="Support">Support</option>
+						<option value="Assaltatore">Assaltatore</option>
+						<option value="Cecchino">Cecchino</option>
+						<option value="Esploratore">Esploratore</option>
+						<option value="Speedrunner">Speedrunner</option>
+						<option value="Builder">Builder</option>
+					</select>
+				</div>
+
+				<div class="field">
+					<label for="playerDescription">Descrizione</label>
+					<textarea id="playerDescription" name="playerDescription" rows="4" placeholder="Descrivi stile di gioco, punti forti o ruolo nel team" required></textarea>
+				</div>
+
+				<div class="field">
+					<label for="preferredPlatform">Piattaforma preferita</label>
+					<select id="preferredPlatform" name="preferredPlatform" required>
+						<option value="">Scegli piattaforma</option>
+						<option value="PC">PC</option>
+						<option value="PlayStation">PlayStation</option>
+						<option value="Xbox">Xbox</option>
+						<option value="Nintendo Switch">Nintendo Switch</option>
+						<option value="Mobile">Mobile</option>
+					</select>
+				</div>
+
+				<div class="field">
+					<label for="favoriteGame">Gioco preferito</label>
+					<input id="favoriteGame" name="favoriteGame" type="text" placeholder="Es. Rocket League" required>
+				</div>
+
+				<div class="actions">
+					<button type="submit" class="btn primary">Crea carta giocatore</button>
+				</div>
+			</form>
+
+			<div id="cardPreview" class="card-preview" aria-live="polite">
+				<p class="empty">Compila il form per vedere l'anteprima della carta.</p>
+			</div>
+		</section>
+
+		<!-- Deck delle carte giocatore salvate -->
+		<section class="deck-section">
+			<div class="deck-header">
+				<div>
+					<p class="eyebrow">Player deck</p>
+					<h2>Carte giocatori</h2>
+				</div>
+
+				<div class="deck-actions">
+					<button type="button" id="fillButton" class="btn secondary">Riempi con dati fittizi</button>
+					<button type="button" id="clearButton" class="btn danger">Cancella dati</button>
+				</div>
+			</div>
+
+			<div class="deck deck-empty" id="playerDeck">
+				<p class="empty deck-empty-message">Il deck e vuoto. Salva una carta dal form per iniziare a sfogliarlo.</p>
+			</div>
+
+			<div class="deck-controls" aria-label="Controlli carosello">
+				<button type="button" id="previousCardButton" class="btn-icon" aria-label="Carta precedente">&lt;</button>
+				<button type="button" id="nextCardButton" class="btn-icon" aria-label="Carta successiva">&gt;</button>
+			</div>
+		</section>
+	</main>
+
+	<!-- Script principali -->
+	<script src="./assets/scripts/theme.js" defer></script>
+	<script src="./assets/scripts/deck.js" defer></script>
+	<script src="./assets/scripts/form.js" defer></script>
+</body>
+</html>
