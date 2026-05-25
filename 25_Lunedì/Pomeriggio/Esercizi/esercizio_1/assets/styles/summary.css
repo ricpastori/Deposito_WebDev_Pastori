@@ -1,0 +1,92 @@
+/* Schede delle statistiche */
+.summary-cards {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 18px;
+}
+
+.summary-card {
+	flex: 1 1 280px;
+	box-shadow: var(--shadow);
+	border: 2px solid var(--border);
+	border-top: 8px solid var(--accent-green);
+	border-radius: 8px;
+	background: var(--surface);
+	padding: 24px;
+}
+
+.summary-card:nth-child(2) {
+	border-top-color: var(--accent-pink);
+}
+
+.summary-label {
+	display: block;
+	margin-bottom: 8px;
+	color: var(--muted);
+	font-weight: 700;
+}
+
+.summary-card strong {
+	color: var(--primary-dark);
+	font-size: 2rem;
+}
+
+/* Liste di riepilogo */
+.tag-list,
+.product-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.tag-list li,
+.product-list li {
+	border: 2px solid transparent;
+	border-radius: 8px;
+	background: var(--surface-muted);
+	padding: 10px 12px;
+	width: 100%;
+	color: var(--primary-dark);
+	font-weight: 700;
+}
+
+/* Varianti colorate delle categorie */
+.tag-list li:nth-child(3n + 1) {
+	border-color: #ffd166;
+	background: #fff0a8;
+}
+
+.tag-list li:nth-child(3n + 2) {
+	border-color: #a7ebc7;
+	background: #e8fbf1;
+}
+
+.tag-list li:nth-child(3n + 3) {
+	border-color: #ffc0d3;
+	background: #ffe8f0;
+}
+
+/* Prodotti non disponibili */
+.product-list {
+	flex-direction: column;
+}
+
+.product-list li {
+	border-color: #ffc0d3;
+	background: #fff4f7;
+}
+
+/* Responsive della pagina riepilogo */
+@media (max-width: 760px) {
+	.summary-cards {
+		flex-direction: column;
+	}
+
+	.summary-card {
+		flex: 0 1 auto;
+		padding: 20px;
+	}
+}

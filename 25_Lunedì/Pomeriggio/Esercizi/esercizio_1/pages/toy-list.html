@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!-- Meta informazioni della pagina -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elenco dei giocattoli salvati nel browser tramite JSON e localStorage.">
+    <meta name="author" content="Riccardo Pastori">
+    <title>Negozio di Giocattoli | Elenco</title>
+
+    <!-- Fogli di stile e script della pagina -->
+    <link rel="stylesheet" href="./../assets/styles/theme.css">
+    <link rel="stylesheet" href="./../assets/styles/toy-list.css">
+    <script src="./../assets/scripts/toy-list.js" defer></script>
+</head>
+<body>
+    <!-- Intestazione e menu di navigazione -->
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="logo" href="./../index.html">Toy Manager</a>
+
+            <nav class="main-nav" aria-label="Navigazione principale">
+                <a href="./../index.html">Inserimento</a>
+                <a href="./toy-list.html" aria-current="page">Elenco</a>
+                <a href="./summary.html">Riepilogo</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenuto principale -->
+    <main class="container page-layout">
+        <!-- Introduzione della pagina -->
+        <section class="intro">
+            <p class="eyebrow">Inventario</p>
+            <h1>Elenco dei giocattoli salvati</h1>
+            <p>
+                In questa pagina il JavaScript potra leggere il JSON salvato nel
+                localStorage, trasformarlo in oggetti JavaScript e mostrare tutti i
+                prodotti registrati.
+            </p>
+        </section>
+
+        <!-- Elenco dei giocattoli salvati -->
+        <section class="panel" aria-labelledby="list-title">
+            <div class="section-heading">
+                <h2 id="list-title">Prodotti inseriti</h2>
+                <a class="primary-button" href="./../index.html">Aggiungi prodotto</a>
+            </div>
+
+            <!-- Contenitore popolato da JavaScript -->
+            <div id="toy-list" class="toy-list" aria-live="polite"></div>
+
+            <!-- Messaggio mostrato quando non ci sono prodotti -->
+            <div id="empty-list-message" class="empty-state" role="status">
+                <strong>Non sono ancora presenti giochi</strong>
+                <span>Inserisci il primo prodotto dalla pagina iniziale.</span>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer del sito -->
+    <footer class="site-footer">
+        <p>&copy; 2026 <a href="https://ricpastori.com" target="_blank" rel="noopener">Riccardo Pastori</a></p>
+    </footer>
+</body>
+</html>

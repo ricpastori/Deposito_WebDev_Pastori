@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!-- Meta informazioni della pagina -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Riepilogo dei dati salvati per un negozio di giocattoli con statistiche e prodotti non disponibili.">
+    <meta name="author" content="Riccardo Pastori">
+    <title>Negozio di Giocattoli | Riepilogo</title>
+
+    <!-- Fogli di stile e script della pagina -->
+    <link rel="stylesheet" href="./../assets/styles/theme.css">
+    <link rel="stylesheet" href="./../assets/styles/summary.css">
+    <script src="./../assets/scripts/summary.js" defer></script>
+</head>
+<body>
+    <!-- Intestazione e menu di navigazione -->
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="logo" href="./../index.html">Toy Manager</a>
+
+            <nav class="main-nav" aria-label="Navigazione principale">
+                <a href="./../index.html">Inserimento</a>
+                <a href="./toy-list.html">Elenco</a>
+                <a href="./summary.html" aria-current="page">Riepilogo</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenuto principale -->
+    <main class="container page-layout">
+        <!-- Introduzione della pagina -->
+        <section class="intro">
+            <p class="eyebrow">Statistiche</p>
+            <h1>Riepilogo inventario</h1>
+            <p>
+                Qui puoi mostrare i dati calcolati partendo dal JSON salvato:
+                totale prodotti, categorie disponibili, prezzo medio e prodotti non
+                disponibili.
+            </p>
+        </section>
+
+        <!-- Statistiche principali -->
+        <section class="summary-cards" aria-label="Riepilogo dei dati salvati">
+            <article class="summary-card">
+                <span class="summary-label">Totale giocattoli</span>
+                <strong id="total-toys">0</strong>
+            </article>
+
+            <article class="summary-card">
+                <span class="summary-label">Prezzo medio</span>
+                <strong id="average-price">0,00 euro</strong>
+            </article>
+        </section>
+
+        <!-- Categorie lette dai dati salvati -->
+        <section class="panel" aria-labelledby="categories-title">
+            <h2 id="categories-title">Categorie disponibili</h2>
+            <ul id="category-list" class="tag-list">
+                <li>Ancora nessuna categoria</li>
+            </ul>
+        </section>
+
+        <!-- Prodotti segnati come non disponibili -->
+        <section class="panel" aria-labelledby="unavailable-title">
+            <h2 id="unavailable-title">Prodotti non disponibili</h2>
+            <ul id="unavailable-list" class="product-list">
+                <li>Nessun prodotto non disponibile</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer del sito -->
+    <footer class="site-footer">
+        <p>&copy; 2026 <a href="https://ricpastori.com" target="_blank" rel="noopener">Riccardo Pastori</a></p>
+    </footer>
+</body>
+</html>

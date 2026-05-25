@@ -1,0 +1,107 @@
+/* Etichette e campi */
+label,
+legend {
+	color: var(--text);
+	font-weight: 700;
+}
+
+input,
+select {
+	margin-top: 8px;
+	border: 2px solid var(--border);
+	border-radius: 8px;
+	background: #fffefa;
+	padding: 12px 14px;
+	width: 100%;
+	color: var(--text);
+	font: inherit;
+	line-height: 1.5;
+}
+
+/* Select con aspetto coerente agli input */
+select {
+	appearance: none;
+	background-image:
+		linear-gradient(45deg, transparent 50%, var(--primary-dark) 50%),
+		linear-gradient(135deg, var(--primary-dark) 50%, transparent 50%);
+	background-position:
+		calc(100% - 20px) 50%,
+		calc(100% - 14px) 50%;
+	background-size:
+		6px 6px,
+		6px 6px;
+	background-repeat: no-repeat;
+	padding-right: 42px;
+}
+
+/* Stato focus dei campi */
+input:focus,
+select:focus {
+	outline: 4px solid rgba(40, 120, 255, 0.16);
+	border-color: var(--primary);
+}
+
+/* Layout del form */
+.toy-form {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.form-fields {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 18px;
+}
+
+.form-fields label {
+	flex: 1 1 320px;
+}
+
+/* Scelta disponibilita */
+.availability-box {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px 20px;
+	margin: 0;
+	border: 2px dashed var(--border);
+	border-radius: 8px;
+	background: #fbfdff;
+	padding: 16px;
+}
+
+.radio-option {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	color: var(--muted);
+}
+
+.radio-option input {
+	margin: 0;
+	width: auto;
+	accent-color: var(--primary);
+}
+
+/* Pulsanti del form */
+.actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+}
+
+/* Messaggi del form */
+.message {
+	color: var(--muted);
+}
+
+/* Responsive della pagina di inserimento */
+@media (max-width: 760px) {
+	.form-fields {
+		flex-direction: column;
+	}
+
+	.form-fields label {
+		flex: 0 1 auto;
+	}
+}
