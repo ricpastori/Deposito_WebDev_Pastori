@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calcolatrice</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+</head>
+<body>
+	<main class="container">
+		<article>
+			<h1>Calcolatrice</h1>
+
+			<form id="calculatorForm">
+				<input id="firstNumber" name="firstNumber" type="number" step="any" placeholder="Primo numero" required>
+				<select id="operator" name="operator" required>
+					<option value="+">+</option>
+					<option value="-">-</option>
+					<option value="*">*</option>
+					<option value="/">/</option>
+				</select>
+				<input id="secondNumber" name="secondNumber" type="number" step="any" placeholder="Secondo numero" required>
+				<button type="submit">Calcola</button>
+			</form>
+
+			<p>Risultato: <strong id="result">0</strong></p>
+			<a href="/?page=home" role="button">Torna alla home</a>
+		</article>
+	</main>
+
+	<script>
+		const calculatorForm = document.getElementById("calculatorForm");
+
+		calculatorForm.addEventListener("submit", calculateResult);
+
+		function calculateResult(event) {
+			event.preventDefault();
+
+			const formData = new FormData(calculatorForm);
+			const firstNumber = Number(formData.get("firstNumber"));
+			const secondNumber = Number(formData.get("secondNumber"));
+			const operator = String(formData.get("operator"));
+			let result = 0;
+
+			switch (operator) {
+				case "+":
+					result = firstNumber + secondNumber;
+					break;
+				case "-":
+					result = firstNumber - secondNumber;
+					break;
+				case "*":
+					result = firstNumber * secondNumber;
+					break;
+				case "/":
+          if (secondNumber === 0) {
+            result = "Impossibile dividere per 0"
+          } else {
+            result = firstNumber / secondNumber;
+          }
+					break;
+			}
+
+			document.getElementById("result").textContent = result;
+		}
+	</script>
+</body>
+</html>

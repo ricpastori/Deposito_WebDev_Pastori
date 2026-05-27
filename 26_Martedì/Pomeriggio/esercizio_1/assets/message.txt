@@ -1,0 +1,3 @@
+Messaggio letto dal file TXT.
+
+Se lo vedi nel terminale, la funzione showMessage() sta funzionando correttamente.
