@@ -50,24 +50,83 @@ INNER JOIN Loans on(Loans.reader_id=Readers.id) GROUP BY name, surname;
 
 -- LEFT JOIN mostra tutte le righe della tabella a sinistra, cioe' Readers.
 -- Se un lettore non ha prestiti, i campi provenienti da Loans saranno NULL.
--- Questa query quindi parte da tutti i lettori e prova ad agganciare i loro prestiti.
+-- WHERE Loans.id is null tiene solo i lettori per cui non e' stato trovato nessun prestito.
+-- Questa query quindi trova i lettori senza prestiti.
 SELECT fiscal_code FROM Readers
-LEFT JOIN Loans on(Loans.reader_id=Readers.id);
+LEFT JOIN Loans on(Loans.reader_id=Readers.id) WHERE Loans.id is null;
 
--- Anche questo e' un LEFT JOIN, ma la tabella a sinistra e' Loans.
--- La condizione WHERE Loans.id is null cerca righe in cui l'id del prestito e' NULL.
--- Pero' Loans e' la tabella di partenza: se una riga arriva da Loans, il suo id normalmente esiste.
--- Per questo motivo questa query non e' utile per trovare lettori senza prestiti.
-SELECT fiscal_code FROM Loans
-LEFT JOIN Readers on(Loans.reader_id=Readers.id) WHERE Loans.id is null;
+-- ESEMPIO DI LEFT JOIN
+-- La tabella a sinistra e' Readers, quindi il risultato mantiene tutti i lettori.
+-- Se un lettore ha uno o piu' prestiti, vedremo anche i dati di Loans.
+-- Se un lettore non ha prestiti, loan_id e operation_date saranno NULL.
+-- Mostrare colonne di entrambe le tabelle rende visibile che cosa e' stato collegato.
+SELECT
+    Readers.id AS reader_id,
+    Readers.fiscal_code,
+    Loans.id AS loan_id,
+    Loans.operation_date
+FROM Readers
+LEFT JOIN Loans ON Loans.reader_id = Readers.id;
 
--- RIGHT JOIN e' simile al LEFT JOIN, ma mantiene tutte le righe della tabella a destra.
--- Qui la tabella a destra e' Readers, quindi vengono considerati tutti i lettori.
--- WHERE Loans.id is null filtra i casi in cui non e' stato trovato nessun prestito collegato.
--- Questa query serve a trovare i lettori che non hanno prestiti.
-SELECT fiscal_code FROM Loans
-RIGHT JOIN Readers on(Loans.reader_id=Readers.id) WHERE Loans.id is null;
+-- ESEMPIO DI RIGHT JOIN
+-- La tabella a destra e' Loans, quindi il risultato mantiene tutti i prestiti.
+-- Readers viene collegata solo quando esiste un lettore con id uguale a Loans.reader_id.
+-- Nel nostro database un prestito dovrebbe sempre avere un lettore valido, grazie alla FOREIGN KEY.
+-- In generale, se un prestito non avesse lettore, reader_id e fiscal_code sarebbero NULL.
+SELECT
+    Readers.id AS reader_id,
+    Readers.fiscal_code,
+    Loans.id AS loan_id,
+    Loans.operation_date
+FROM Readers
+RIGHT JOIN Loans ON Loans.reader_id = Readers.id;
 
--- Questa query e' uguale alla precedente: sembra una ripetizione usata per esercizio o confronto.
-SELECT fiscal_code FROM Loans
-RIGHT JOIN Readers on(Loans.reader_id=Readers.id) WHERE Loans.id is null;
+-- ESEMPIO DI FULL JOIN
+-- FULL JOIN mantiene tutte le righe di entrambe le tabelle.
+-- Quindi mostra:
+-- lettori con prestiti, lettori senza prestiti e anche eventuali prestiti senza lettore.
+-- Quando manca una corrispondenza, i campi dell'altra tabella diventano NULL.
+-- MySQL non supporta direttamente FULL JOIN.
+-- In un database che supporta FULL JOIN, la forma sarebbe:
+-- SELECT ... FROM Readers FULL JOIN Loans ON Loans.reader_id = Readers.id;
+-- In MySQL lo simuliamo facendo un LEFT JOIN piu' un RIGHT JOIN collegati con UNION.
+SELECT
+    Readers.id AS reader_id,
+    Readers.fiscal_code,
+    Loans.id AS loan_id,
+    Loans.operation_date
+FROM Readers
+LEFT JOIN Loans ON Loans.reader_id = Readers.id
+UNION
+SELECT
+    Readers.id AS reader_id,
+    Readers.fiscal_code,
+    Loans.id AS loan_id,
+    Loans.operation_date
+FROM Readers
+RIGHT JOIN Loans ON Loans.reader_id = Readers.id;
+
+-- ESEMPIO DI UNION
+-- UNION non affianca colonne come un JOIN: mette i risultati uno sotto l'altro.
+-- Le SELECT unite da UNION devono avere lo stesso numero di colonne, con tipi compatibili.
+-- UNION elimina le righe duplicate.
+-- Qui usiamo due volte la stessa ricerca: anche se "Milano" compare piu' volte, nel risultato resta una sola volta.
+SELECT city AS example_value
+FROM Readers
+WHERE city = 'Milano'
+UNION
+SELECT city AS example_value
+FROM Readers
+WHERE city = 'Milano';
+
+-- ESEMPIO DI UNION ALL
+-- UNION ALL funziona come UNION, ma non elimina i duplicati.
+-- Qui la stessa ricerca viene eseguita due volte e le righe duplicate rimangono nel risultato.
+-- E' utile quando i duplicati hanno significato oppure quando vogliamo contare tutte le righe prodotte.
+SELECT city AS example_value
+FROM Readers
+WHERE city = 'Milano'
+UNION ALL
+SELECT city AS example_value
+FROM Readers
+WHERE city = 'Milano';
