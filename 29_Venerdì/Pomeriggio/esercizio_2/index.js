@@ -8,10 +8,7 @@ const PORT = process.env.PORT || 3008;
 
 // Attivazione della connessione asincrona verso la URI locale o Cloud Atlas
 mongoose
-	.connect(
-		process.env.MONGO_URI ||
-			"mongodb://127.0.0.1:27017/wishlist_db",
-	)
+	.connect(process.env.MONGO_URI || "mongodb://127.0.0.1:27017/corso_db")
 	.then(() => console.log("Pipeline di comunicazione con MongoDB stabilita."))
 	.catch((err) => console.error("Errore critico durante l'handshake:", err));
 
@@ -31,13 +28,11 @@ app.get("/api/articles", async (req, res) => {
 	try {
 		// Sospensione locale della routine fino al recupero dei dati dal database
 		const articlesList = await Article.find();
-		res
-			.status(200)
-			.json({
-				status: status,
-				message: "Articolo aggiunto alla wishlist",
-				articolo: articlesList,
-			});
+		res.status(200).json({
+			status: status,
+			message: "Articolo aggiunto alla wishlist",
+			articolo: articlesList,
+		});
 	} catch (error) {
 		// Intercettazione guasti per prevenire il crash incontrollato del demone server
 		res.status(500).json({ errore: "Latenza database o query malformata" });
