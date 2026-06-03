@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3008;
 
 // Attivazione della connessione asincrona verso la URI locale o Cloud Atlas
 mongoose
-	.connect(process.env.MONGO_URI || "mongodb://127.0.0.1:27017/wishlist_db")
+	.connect(process.env.MONGO_URI) // || "mongodb://127.0.0.1:27017/wishlist_db")
 	.then(() => console.log("Pipeline di comunicazione con MongoDB stabilita."))
 	.catch((err) => console.error("Errore critico durante l'handshake:", err));
 
