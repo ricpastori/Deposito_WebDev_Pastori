@@ -1,0 +1,96 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site-header,
+.site-footer {
+  background: var(--pico-card-background-color);
+}
+
+.site-header {
+  border-bottom: 1px solid var(--pico-muted-border-color);
+}
+
+.site-logo {
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-decoration: none;
+}
+
+main.container {
+  flex: 1;
+  padding-block: 2.5rem;
+}
+
+.page-section {
+  margin-bottom: 2rem;
+  scroll-margin-top: 5rem;
+}
+
+.welcome-section,
+.contacts-section {
+  border: 1px solid var(--pico-muted-border-color);
+  border-radius: var(--pico-border-radius);
+  background: var(--pico-card-background-color);
+  padding: 2rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 0;
+  border: 1px solid var(--pico-muted-border-color);
+  text-align: center;
+}
+
+.team-card h3,
+.team-card p {
+  margin: 0;
+}
+
+.team-card img {
+  align-self: center;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  list-style-type: none;
+}
+
+.skills-list li {
+  border-radius: 999px;
+  background: var(--pico-secondary-background);
+  padding: 0.2rem 0.55rem;
+  color: var(--pico-secondary-inverse);
+  font-size: 0.85rem;
+  list-style: none;
+}
+
+.skills-list li::marker {
+  content: "";
+}
+
+.site-footer {
+  border-top: 1px solid var(--pico-muted-border-color);
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+}
