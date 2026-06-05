@@ -1,0 +1,620 @@
+[
+  {
+    "id": 1,
+    "city": "Agrigento",
+    "latitude": 37.3,
+    "longitude": 13.6
+  },
+  {
+    "id": 2,
+    "city": "Alessandria",
+    "latitude": 44.9167,
+    "longitude": 8.6167
+  },
+  {
+    "id": 3,
+    "city": "Ancona",
+    "latitude": 43.6167,
+    "longitude": 13.5167
+  },
+  {
+    "id": 4,
+    "city": "Aosta",
+    "latitude": 45.7333,
+    "longitude": 7.3167
+  },
+  {
+    "id": 5,
+    "city": "Arezzo",
+    "latitude": 43.4667,
+    "longitude": 11.8833
+  },
+  {
+    "id": 6,
+    "city": "Ascoli Piceno",
+    "latitude": 42.85,
+    "longitude": 13.5667
+  },
+  {
+    "id": 7,
+    "city": "Asti",
+    "latitude": 44.8833,
+    "longitude": 8.2
+  },
+  {
+    "id": 8,
+    "city": "Avellino",
+    "latitude": 40.9167,
+    "longitude": 14.7833
+  },
+  {
+    "id": 9,
+    "city": "Bari",
+    "latitude": 41.1167,
+    "longitude": 16.8833
+  },
+  {
+    "id": 10,
+    "city": "Belluno",
+    "latitude": 46.1333,
+    "longitude": 12.2167
+  },
+  {
+    "id": 11,
+    "city": "Benevento",
+    "latitude": 41.1333,
+    "longitude": 14.7667
+  },
+  {
+    "id": 12,
+    "city": "Bergamo",
+    "latitude": 45.7,
+    "longitude": 9.6667
+  },
+  {
+    "id": 13,
+    "city": "Biella",
+    "latitude": 45.5667,
+    "longitude": 8.05
+  },
+  {
+    "id": 14,
+    "city": "Bologna",
+    "latitude": 44.5,
+    "longitude": 11.35
+  },
+  {
+    "id": 15,
+    "city": "Bolzano",
+    "latitude": 46.5,
+    "longitude": 11.3333
+  },
+  {
+    "id": 16,
+    "city": "Brescia",
+    "latitude": 45.5333,
+    "longitude": 10.2
+  },
+  {
+    "id": 17,
+    "city": "Brindisi",
+    "latitude": 40.65,
+    "longitude": 17.9333
+  },
+  {
+    "id": 18,
+    "city": "Cagliari",
+    "latitude": 39.2167,
+    "longitude": 9.1167
+  },
+  {
+    "id": 19,
+    "city": "Caltanissetta",
+    "latitude": 37.4833,
+    "longitude": 14.0667
+  },
+  {
+    "id": 20,
+    "city": "Campobasso",
+    "latitude": 41.5667,
+    "longitude": 14.65
+  },
+  {
+    "id": 21,
+    "city": "Caserta",
+    "latitude": 41.0667,
+    "longitude": 14.3167
+  },
+  {
+    "id": 22,
+    "city": "Catania",
+    "latitude": 37.5,
+    "longitude": 15.0833
+  },
+  {
+    "id": 23,
+    "city": "Catanzaro",
+    "latitude": 38.9,
+    "longitude": 16.5833
+  },
+  {
+    "id": 24,
+    "city": "Chieti",
+    "latitude": 42.35,
+    "longitude": 14.1667
+  },
+  {
+    "id": 25,
+    "city": "Como",
+    "latitude": 45.8,
+    "longitude": 9.0833
+  },
+  {
+    "id": 26,
+    "city": "Cosenza",
+    "latitude": 39.2833,
+    "longitude": 16.25
+  },
+  {
+    "id": 27,
+    "city": "Cremona",
+    "latitude": 45.1333,
+    "longitude": 10.0333
+  },
+  {
+    "id": 28,
+    "city": "Crotone",
+    "latitude": 39.0833,
+    "longitude": 17.1333
+  },
+  {
+    "id": 29,
+    "city": "Cuneo",
+    "latitude": 44.4,
+    "longitude": 7.55
+  },
+  {
+    "id": 30,
+    "city": "Enna",
+    "latitude": 37.5667,
+    "longitude": 14.2667
+  },
+  {
+    "id": 31,
+    "city": "Ferrara",
+    "latitude": 44.8333,
+    "longitude": 11.6333
+  },
+  {
+    "id": 32,
+    "city": "Firenze",
+    "latitude": 43.7667,
+    "longitude": 11.25
+  },
+  {
+    "id": 33,
+    "city": "Foggia",
+    "latitude": 41.4667,
+    "longitude": 15.55
+  },
+  {
+    "id": 34,
+    "city": "Forlì",
+    "latitude": 44.2167,
+    "longitude": 12.05
+  },
+  {
+    "id": 35,
+    "city": "Frosinone",
+    "latitude": 41.6333,
+    "longitude": 13.3667
+  },
+  {
+    "id": 36,
+    "city": "Genova",
+    "latitude": 44.4167,
+    "longitude": 8.9167
+  },
+  {
+    "id": 37,
+    "city": "Gorizia",
+    "latitude": 45.95,
+    "longitude": 13.6333
+  },
+  {
+    "id": 38,
+    "city": "Grosseto",
+    "latitude": 42.7667,
+    "longitude": 11.1167
+  },
+  {
+    "id": 39,
+    "city": "Imperia",
+    "latitude": 43.8833,
+    "longitude": 8.0167
+  },
+  {
+    "id": 40,
+    "city": "Isernia",
+    "latitude": 41.6,
+    "longitude": 14.2333
+  },
+  {
+    "id": 41,
+    "city": "L'Aquila",
+    "latitude": 42.35,
+    "longitude": 13.4
+  },
+  {
+    "id": 42,
+    "city": "La Spezia",
+    "latitude": 44.1167,
+    "longitude": 9.8333
+  },
+  {
+    "id": 43,
+    "city": "Latina",
+    "latitude": 41.4667,
+    "longitude": 12.8833
+  },
+  {
+    "id": 44,
+    "city": "Lecce",
+    "latitude": 40.35,
+    "longitude": 18.1833
+  },
+  {
+    "id": 45,
+    "city": "Lecco",
+    "latitude": 45.85,
+    "longitude": 9.3833
+  },
+  {
+    "id": 46,
+    "city": "Livorno",
+    "latitude": 43.55,
+    "longitude": 10.3167
+  },
+  {
+    "id": 47,
+    "city": "Lodi",
+    "latitude": 45.3167,
+    "longitude": 9.5
+  },
+  {
+    "id": 48,
+    "city": "Lucca",
+    "latitude": 43.85,
+    "longitude": 10.5167
+  },
+  {
+    "id": 49,
+    "city": "Macerata",
+    "latitude": 43.3,
+    "longitude": 13.45
+  },
+  {
+    "id": 50,
+    "city": "Mantova",
+    "latitude": 45.15,
+    "longitude": 10.7833
+  },
+  {
+    "id": 51,
+    "city": "Massa",
+    "latitude": 44.3333,
+    "longitude": 10.0833
+  },
+  {
+    "id": 52,
+    "city": "Matera",
+    "latitude": 40.6833,
+    "longitude": 16.6
+  },
+  {
+    "id": 53,
+    "city": "Messina",
+    "latitude": 38.1833,
+    "longitude": 15.5667
+  },
+  {
+    "id": 54,
+    "city": "Milano",
+    "latitude": 45.4667,
+    "longitude": 9.1833
+  },
+  {
+    "id": 55,
+    "city": "Modena",
+    "latitude": 44.65,
+    "longitude": 10.9167
+  },
+  {
+    "id": 56,
+    "city": "Napoli",
+    "latitude": 40.35,
+    "longitude": 14.25
+  },
+  {
+    "id": 57,
+    "city": "Novara",
+    "latitude": 45.45,
+    "longitude": 8.6333
+  },
+  {
+    "id": 58,
+    "city": "Nuoro",
+    "latitude": 40.3167,
+    "longitude": 9.2667
+  },
+  {
+    "id": 59,
+    "city": "Oristano",
+    "latitude": 39.9,
+    "longitude": 8.6
+  },
+  {
+    "id": 60,
+    "city": "Padova",
+    "latitude": 45.4,
+    "longitude": 11.8833
+  },
+  {
+    "id": 61,
+    "city": "Palermo",
+    "latitude": 38.1167,
+    "longitude": 13.35
+  },
+  {
+    "id": 62,
+    "city": "Parma",
+    "latitude": 44.8,
+    "longitude": 10.35
+  },
+  {
+    "id": 63,
+    "city": "Pavia",
+    "latitude": 45.1833,
+    "longitude": 9.1667
+  },
+  {
+    "id": 64,
+    "city": "Perugia",
+    "latitude": 43.1167,
+    "longitude": 12.4
+  },
+  {
+    "id": 65,
+    "city": "Pesaro",
+    "latitude": 43.9,
+    "longitude": 12.9167
+  },
+  {
+    "id": 66,
+    "city": "Pescara",
+    "latitude": 42.45,
+    "longitude": 14.2167
+  },
+  {
+    "id": 67,
+    "city": "Piacenza",
+    "latitude": 45.05,
+    "longitude": 9.6833
+  },
+  {
+    "id": 68,
+    "city": "Pisa",
+    "latitude": 43.7167,
+    "longitude": 10.4
+  },
+  {
+    "id": 69,
+    "city": "Pistoia",
+    "latitude": 43.9333,
+    "longitude": 10.9167
+  },
+  {
+    "id": 70,
+    "city": "Pordenone",
+    "latitude": 45.95,
+    "longitude": 12.65
+  },
+  {
+    "id": 71,
+    "city": "Potenza",
+    "latitude": 40.6333,
+    "longitude": 15.8167
+  },
+  {
+    "id": 72,
+    "city": "Prato",
+    "latitude": 43.8833,
+    "longitude": 11.1
+  },
+  {
+    "id": 73,
+    "city": "Ragusa",
+    "latitude": 36.9333,
+    "longitude": 14.7333
+  },
+  {
+    "id": 74,
+    "city": "Ravenna",
+    "latitude": 44.4167,
+    "longitude": 12.2
+  },
+  {
+    "id": 75,
+    "city": "Reggio di Calabria",
+    "latitude": 38.1,
+    "longitude": 15.65
+  },
+  {
+    "id": 76,
+    "city": "Reggio nell'Emilia",
+    "latitude": 44.7,
+    "longitude": 10.6333
+  },
+  {
+    "id": 77,
+    "city": "Rieti",
+    "latitude": 42.3667,
+    "longitude": 12.8667
+  },
+  {
+    "id": 78,
+    "city": "Rimini",
+    "latitude": 44.0667,
+    "longitude": 12.5667
+  },
+  {
+    "id": 79,
+    "city": "Roma",
+    "latitude": 41.9,
+    "longitude": 12.4833
+  },
+  {
+    "id": 80,
+    "city": "Rovigo",
+    "latitude": 45.0667,
+    "longitude": 11.8
+  },
+  {
+    "id": 81,
+    "city": "Salerno",
+    "latitude": 40.6833,
+    "longitude": 14.7667
+  },
+  {
+    "id": 82,
+    "city": "Sassari",
+    "latitude": 40.7167,
+    "longitude": 8.5667
+  },
+  {
+    "id": 83,
+    "city": "Savona",
+    "latitude": 44.3167,
+    "longitude": 8.4667
+  },
+  {
+    "id": 84,
+    "city": "Siena",
+    "latitude": 43.3167,
+    "longitude": 11.3
+  },
+  {
+    "id": 85,
+    "city": "Siracusa",
+    "latitude": 37.0667,
+    "longitude": 15.2833
+  },
+  {
+    "id": 86,
+    "city": "Sondrio",
+    "latitude": 46.1833,
+    "longitude": 9.8833
+  },
+  {
+    "id": 87,
+    "city": "Taranto",
+    "latitude": 40.4667,
+    "longitude": 17.2333
+  },
+  {
+    "id": 88,
+    "city": "Teramo",
+    "latitude": 42.6667,
+    "longitude": 13.7167
+  },
+  {
+    "id": 89,
+    "city": "Terni",
+    "latitude": 42.5667,
+    "longitude": 12.6667
+  },
+  {
+    "id": 90,
+    "city": "Torino",
+    "latitude": 45.0667,
+    "longitude": 7.7
+  },
+  {
+    "id": 91,
+    "city": "Trapani",
+    "latitude": 38.0167,
+    "longitude": 12.5333
+  },
+  {
+    "id": 92,
+    "city": "Trento",
+    "latitude": 46.0667,
+    "longitude": 11.1333
+  },
+  {
+    "id": 93,
+    "city": "Treviso",
+    "latitude": 45.6667,
+    "longitude": 12.25
+  },
+  {
+    "id": 94,
+    "city": "Trieste",
+    "latitude": 45.65,
+    "longitude": 13.7667
+  },
+  {
+    "id": 95,
+    "city": "Udine",
+    "latitude": 46.0667,
+    "longitude": 13.2333
+  },
+  {
+    "id": 96,
+    "city": "Varese",
+    "latitude": 45.8333,
+    "longitude": 8.8167
+  },
+  {
+    "id": 97,
+    "city": "Venezia",
+    "latitude": 45.4333,
+    "longitude": 12.35
+  },
+  {
+    "id": 98,
+    "city": "Verbania",
+    "latitude": 45.9333,
+    "longitude": 8.55
+  },
+  {
+    "id": 99,
+    "city": "Vercelli",
+    "latitude": 45.3333,
+    "longitude": 8.4167
+  },
+  {
+    "id": 100,
+    "city": "Verona",
+    "latitude": 45.45,
+    "longitude": 11
+  },
+  {
+    "id": 101,
+    "city": "Vibo Valentia",
+    "latitude": 38.6667,
+    "longitude": 16.1
+  },
+  {
+    "id": 102,
+    "city": "Vicenza",
+    "latitude": 45.55,
+    "longitude": 11.55
+  },
+  {
+    "id": 103,
+    "city": "Viterbo",
+    "latitude": 42.55,
+    "longitude": 12.1167
+  }
+]
