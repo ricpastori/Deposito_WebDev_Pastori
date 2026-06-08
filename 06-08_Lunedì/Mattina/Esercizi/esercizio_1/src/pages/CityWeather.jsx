@@ -19,7 +19,7 @@ export function CityWeather() {
 		}
 
 		fetchWeatherByCityId(id);
-	}, [id, fetchWeatherByCityId]);
+	}, [id, city, fetchWeatherByCityId]);
 
 	if (!city) {
 		return (
