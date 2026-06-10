@@ -6,22 +6,20 @@ export function TodoItem({ task }) {
   const deleteTask = useTodoStore((state) => state.deleteTask)
   const toggleCompletion = useTodoStore((state) => state.toggleCompletion)
   const updatePriority = useTodoStore((state) => state.updatePriority)
+  const taskClassName = `grid task priority-${task.priority.toLowerCase()}${
+    task.isCompleted ? ' task-completed' : ''
+  }`
+  const textClassName = task.isCompleted ? 'completed' : ''
 
   return (
-    <article
-      className={`grid task priority-${task.priority.toLowerCase()} ${
-        task.isCompleted ? 'task-completed' : ''
-      }`}
-    >
+    <article className={taskClassName}>
       <label className="task-title">
         <input
           type="checkbox"
           checked={task.isCompleted}
           onChange={() => toggleCompletion(task.id)}
         />
-        <span className={task.isCompleted ? 'completed' : ''}>
-          {task.text}
-        </span>
+        <span className={textClassName}>{task.text}</span>
       </label>
 
       <div className="grid task-actions">

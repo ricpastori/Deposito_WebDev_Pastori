@@ -17,7 +17,6 @@ body {
   margin-bottom: 24px;
 }
 
-.summary,
 .empty-message {
   color: var(--pico-muted-color);
 }
@@ -49,17 +48,12 @@ body {
   margin: 0;
 }
 
-.form-card h2 {
+.form-card h4 {
   margin-bottom: 8px;
 }
 
 .task-form {
   align-items: start;
-}
-
-.task-form div {
-  align-items: center;
-  height: 100%;
 }
 
 .task-form .form-submit button {
@@ -121,14 +115,6 @@ body {
 }
 
 @media (max-width: 700px) {
-.task-form div {
-  height: fit-content;
-}
-
-  .task-form .form-submit {
-    padding-top: 0;
-  }
-
   .task-form .form-submit button {
     margin-top: 0;
     width: 100%;
