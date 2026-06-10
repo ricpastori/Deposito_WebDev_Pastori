@@ -1,0 +1,19 @@
+<article>
+  <header>
+    <h4>Studenti</h4>
+  </header>
+  @if (!students || students.length === 0) {
+    <p>Non ci sono studenti</p>
+  } @else {
+    <ul>
+      @for (student of students; track student.name) {
+        <li [appStudentStatusDirective]="student">
+          {{ student.name }} - {{ getCategory(student.grade) }}
+          @if (!student.present) {
+            <span> (assente)</span>
+          }
+        </li>
+      }
+    </ul>
+  }
+</article>

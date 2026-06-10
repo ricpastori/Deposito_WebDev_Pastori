@@ -1,0 +1,14 @@
+.grid {
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.grid > div {
+  width: 100%;
+}
+
+kbd {
+  display: block;
+  width: 100%;
+  text-align: center;
+}

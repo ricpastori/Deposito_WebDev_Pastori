@@ -1,0 +1,36 @@
+<section>
+  <article>
+    <header>
+      <h5 style="margin-bottom: 0">
+        {{ name }} - {{ brand }} <mark>{{ available }}</mark>
+      </h5>
+    </header>
+    <img [src]="imageUrl" [width]="480" alt="Immagine presa da Unsplash" />
+    <div class="grid">
+      <div>
+        <kbd
+          ><small>{{ tags[0] }}</small></kbd
+        >
+      </div>
+      <div>
+        <kbd
+          ><small>{{ tags[1] }}</small></kbd
+        >
+      </div>
+      <div>
+        <kbd
+          ><small>{{ tags[2] }}</small></kbd
+        >
+      </div>
+    </div>
+    <footer class="grid">
+      <button type="button" (click)="shop()">Compra a {{ finalPrice(price) }}€</button>
+    </footer>
+  </article>
+</section>
+<section>
+  <article>
+    <h6>Cambia nome prodotto</h6>
+    <input [(ngModel)]="name" type="text" />
+  </article>
+</section>

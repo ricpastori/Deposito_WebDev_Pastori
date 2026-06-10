@@ -1,0 +1,50 @@
+{
+	"biome.requireConfiguration": true,
+	"biome.lsp.trace.server": "off",
+	"[html]": {
+		"biome.enabled": false,
+		"editor.defaultFormatter": null,
+		"editor.formatOnSave": false
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "biomejs.biome",
+		"editor.formatOnSave": true
+	},
+	"editor.tokenColorCustomizations": {
+		"textMateRules": [
+			{
+				"scope": [
+					"keyword.control.block.transition.ng",
+					"keyword.control.block.kind.ng",
+					"keyword.control.track.ng",
+					"keyword.operator.expression.of.ng",
+					"storage.type.ng"
+				],
+				"settings": {
+					"foreground": "#C792EA",
+					"fontStyle": "bold"
+				}
+			},
+			{
+				"scope": [
+					"control.block.expression.ng",
+					"expression.ng",
+					"variable.other.constant.ng"
+				],
+				"settings": {
+					"foreground": "#82AAFF"
+				}
+			},
+			{
+				"scope": [
+					"punctuation.definition.block.ts",
+					"punctuation.terminator.statement.ng",
+					"meta.brace.round.ts"
+				],
+				"settings": {
+					"foreground": "#89DDFF"
+				}
+			}
+		]
+	}
+}

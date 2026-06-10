@@ -1,0 +1,17 @@
+h4 {
+  margin-bottom: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}

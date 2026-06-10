@@ -1,0 +1,17 @@
+<h1>Data Bindings Examples</h1>
+
+<!-- Interpolation -->
+<h2>Interpolation</h2>
+<p>Ha {{ num * 2 }} anni</p>
+<img [src]="imgUrl" [width]="imgWidth" alt="Immagine presa da Unsplash" />
+
+<!-- Event binding -->
+<h2>Event binding</h2>
+<button type="button" (click)="saluta()">Saluta</button>
+<p>Il messaggio è: {{ currentMsg }}</p>
+
+<!-- Two-way data binding -->
+<h2>Two-way data binding</h2>
+<input [(ngModel)]="username" type="text" placeholder="Inserisci nome utente" />
+<p>Il nome dell'utente è {{ username }}</p>
+<button type="button" (click)="resetUsername()">Reset username</button>

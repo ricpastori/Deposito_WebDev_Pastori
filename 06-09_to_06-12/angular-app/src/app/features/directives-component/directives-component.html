@@ -1,0 +1,64 @@
+<h1>Directives</h1>
+<h2>@IF</h2>
+
+<button type="button" (click)="isVisible = !isVisible">toggle</button>
+<p customHighlight>è visibile? {{ isVisible }}</p>
+@if (isVisible) {
+  <p>Questo testo appare e scompare</p>
+}
+
+<h2>@IF @ELSEIF @ELSE</h2>
+
+<button type="button" (click)="incrementLevel()">Aumenta livello</button>
+
+@if (userLevel <= 1) {
+  <p>Hai appena cominciato</p>
+} @else if (userLevel === 2) {
+  <p>Sei un principiante</p>
+} @else if (userLevel === 3) {
+  <p>Sei un esperto</p>
+} @else {
+  <p>Sei un master</p>
+}
+
+<h2>@FOR</h2>
+<select [(ngModel)]="favFramework">
+  <option value="">Seleziona un framework</option>
+  @for (e of frameworks; track e; let i = $index) {
+    <option [value]="e">{{ i }}. {{ e }}</option>
+  }
+</select>
+
+<h2>@SWITCH</h2>
+@switch (favFramework) {
+  @case ('Angular') {
+    <p>Hai scelto Angular</p>
+  }
+  @case ('React') {
+    <p>Hai scelto React</p>
+  }
+  @case ('Three.js') {
+    <p>Hai scelto Three.js</p>
+  }
+  @case ('Vue.js') {
+    <p>Hai scelto Vue.js</p>
+  }
+  @default {
+    <p>Seleziona un framework</p>
+  }
+}
+
+<h2>@NGCLASS & @NGSTYLE</h2>
+@if (showList) {
+  @for (e of frameworks; track e; let i = $index) {
+    <li
+      [ngClass]="{ highlight: e === favFramework }"
+      [ngStyle]="{
+        'font-weight': i % 2 === 0 && e !== favFramework ? 'bold' : 'normal',
+        'background-color': e !== favFramework ? 'blue' : '',
+      }"
+    >
+      {{ i }}- {{ e }}
+    </li>
+  }
+}
