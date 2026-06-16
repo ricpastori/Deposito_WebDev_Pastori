@@ -1,0 +1,32 @@
+.box {
+  clip-path: circle();
+  background-color: #222;
+  width: 120px;
+  height: 120px;
+}
+
+section {
+  place-items: center;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+p {
+  font-weight: semibold;
+  font-size: 2rem;
+  text-align: center;
+}
+
+button {
+  width: 100%;
+}

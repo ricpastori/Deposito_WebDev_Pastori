@@ -1,0 +1,8 @@
+@for (product of products; track product.name) {
+  <app-product-card-component
+    [name]="product.name"
+    [description]="product.description"
+    [price]="product.price"
+    [available]="product.available"
+  ></app-product-card-component>
+}

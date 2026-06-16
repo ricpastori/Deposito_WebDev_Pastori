@@ -1,0 +1,9 @@
+@for (star of getStars(); track star) {
+  <button
+    type="button"
+    (click)="selectRating(star)"
+    [class.selected]="star <= currentRating"
+  >
+    &#9733;
+  </button>
+}

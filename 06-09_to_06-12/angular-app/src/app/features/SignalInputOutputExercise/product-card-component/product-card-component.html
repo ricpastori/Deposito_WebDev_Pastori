@@ -1,0 +1,13 @@
+<article>
+  <h5>
+    {{ name() }}
+    <span [class.available]="available()" [class.unavailable]="!available()">
+      {{ available() ? 'Disponibile' : 'Esaurito' }}
+    </span>
+  </h5>
+  <p>{{ description() }}</p>
+
+  <button type="button">
+    Acquista a {{ price() }} euro
+  </button>
+</article>

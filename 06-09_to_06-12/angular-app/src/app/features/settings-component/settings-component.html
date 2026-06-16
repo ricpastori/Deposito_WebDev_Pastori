@@ -1,0 +1,13 @@
+<section>
+  <h1>Settings</h1>
+    <input
+        #usernameInput
+        type="text"
+        [value]="username()"
+        (input)="setUsername(usernameInput.value)"
+    >
+    <button type="button" class="contrast" (click)="toggleTheme()">
+        {{ isDarkTheme() ? 'Attiva tema chiaro &#9728;' : 'Attiva tema scuro &#9790;' }}
+    </button>
+</section>
+<app-preview-component></app-preview-component>

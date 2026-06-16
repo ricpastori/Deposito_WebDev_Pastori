@@ -1,0 +1,37 @@
+<article>
+  <header>
+    <strong>Riepilogo prezzo</strong>
+  </header>
+
+  <figure>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Descrizione</th>
+          <th scope="col">Valore</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Prezzo netto</td>
+          <td>{{ netPrice() }} &euro;</td>
+        </tr>
+
+        <tr>
+          <td>IVA applicata</td>
+          <td>{{ vatTax() * 100 }}%</td>
+        </tr>
+
+        <tr>
+          <td>Prezzo lordo</td>
+          <td>{{ grossPrice() }} &euro;</td>
+        </tr>
+      </tbody>
+    </table>
+  </figure>
+
+  <footer>
+    <input type="number" [value]="netPrice()" (input)="updatePrice($event)">
+  </footer>
+</article>

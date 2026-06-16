@@ -1,0 +1,54 @@
+<h1>Registration Form</h1>
+
+<form #registrationForm="ngForm" (ngSubmit)="onSubmit(registrationForm)">
+  <div>
+    <label for="name">Name:</label>
+    <input id="name" name="name" [(ngModel)]="user.name" #name="ngModel" required minlength="3">
+    @if(name.invalid && (name.touched || registrationForm.submitted)) {
+      @if (name.errors?.['required']) {
+      <p class="error-message">Nome obbligatorio</p>
+    }
+
+    @if (name.errors?.['minlength']) {
+      <p class="error-message">Il nome deve avere almeno 3 caratteri</p>
+    }
+    }
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input id="email" name="email" [(ngModel)]="user.email" #email="ngModel" required email>
+      @if (email.invalid && (email.touched || registrationForm.submitted)) {
+        @if (email.errors?.['required']) {
+          <p class="error-message">Email obbligatoria</p>
+        }
+
+        @if (email.errors?.['email']) {
+          <p class="error-message">L'email non è valida</p>
+        }
+      }
+  </div>
+  <div>
+    <label for="age">Age:</label>
+    <input id="age" name="age" [(ngModel)]="user.age" #age="ngModel" type="number" min="18" required>
+      @if (age.invalid && (age.touched || registrationForm.submitted)) {
+    @if (age.errors?.['required']) {
+      <p class="error-message">Età obbligatoria</p>
+    }
+
+    @if (age.errors?.['min']) {
+      <p class="error-message">L'età minima è 18 anni</p>
+    }
+  }
+  </div>
+  <div>
+    <button type="submit" [disabled]="registrationForm.invalid">Registrati</button>
+  </div>
+</form>
+
+@if (registrationForm.invalid && registrationForm.submitted) {
+  <p class="error-message">Form non valido</p>
+}
+
+@if (submitted) {
+  <p class="confirm-message">Dati inviati</p>
+}

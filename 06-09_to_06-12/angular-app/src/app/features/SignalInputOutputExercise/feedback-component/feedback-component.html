@@ -1,0 +1,12 @@
+<section class="card">
+  <h2>Lascia un feedback</h2>
+
+  <app-star-rating-component
+    [max]="maxRating"
+    (selectedRating)="onRatingSelected($event)"
+  ></app-star-rating-component>
+
+  @if (selectedRating) {
+    <p>Hai dato un voto di {{ selectedRating }} su {{ maxRating }}</p>
+  }
+</section>

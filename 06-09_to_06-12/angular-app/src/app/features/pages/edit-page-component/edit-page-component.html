@@ -1,0 +1,11 @@
+<p>edit-page-component works!</p>
+<input
+type="text"
+[value]="currentValue()"
+(input)="onInput($event)"
+placeholder="Scrivi una modifica">
+
+<button type="button" (click)="save()">SAVE</button>
+
+<p>Valore corrente {{currentValue()}}</p>
+<p>Valore Salvato {{savedValue()}}</p>

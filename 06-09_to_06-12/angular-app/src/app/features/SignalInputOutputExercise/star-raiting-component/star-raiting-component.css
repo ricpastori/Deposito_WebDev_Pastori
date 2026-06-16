@@ -1,0 +1,11 @@
+button {
+  border: 0;
+  background: transparent;
+  color: lightgray;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+button.selected {
+  color: goldenrod;
+}

@@ -1,0 +1,70 @@
+<h1>Contattaci</h1>
+
+<form [formGroup]="contactForm" (ngSubmit)="onContact()">
+  <div>
+    <label for="object">Oggetto:</label>
+    <input id="object" formControlName="object">
+    @if(contactForm.get('object')?.invalid && contactForm.get('object')?.touched) {
+      <p class="error-message">L'oggetto è obbligatorio</p>
+    }
+  </div>
+  <div>
+    <label for="priority">Urgenza:</label>
+    <select id="priority" formControlName="priority">
+      <option value="">Seleziona una priorità</option>
+      <option value="bassa">Bassa</option>
+      <option value="media">Media</option>
+      <option value="alta">Alta</option>
+    </select>
+    @if(contactForm.get('priority')?.invalid && contactForm.get('priority')?.touched) {
+      <p class="error-message">Devi selezionare una priorità</p>
+    }
+  </div>
+  <div>
+    <label for="message">Messaggio:</label>
+    <input id="message" formControlName="message">
+    @if(contactForm.get('message')?.invalid && contactForm.get('message')?.touched) {
+      @if(contactForm.get('message')?.errors?.['required']) {
+        <p class="error-message">Il messaggio è obbligatorio</p>
+      }
+
+      @if(contactForm.get('message')?.errors?.['minlength']) {
+        <p class="error-message">
+          Il messaggio deve contenere almeno 10 caratteri
+          ({{ contactForm.get('message')?.value?.length}}/10)
+        </p>
+      }
+    }
+  </div>
+  <div>
+    <button type="submit" [disabled]="!contactForm.valid">Invia messaggio</button>
+  </div>
+</form>
+
+@if (submitted) {
+  <div>
+    <h3>Dati inviati:</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Campo</th>
+          <th>Valore</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Oggetto</td>
+          <td>{{ contactForm.get('object')?.value }}</td>
+        </tr>
+        <tr>
+          <td>Urgenza</td>
+          <td>{{ contactForm.get('priority')?.value }}</td>
+        </tr>
+        <tr>
+          <td>Messaggio</td>
+          <td>{{ contactForm.get('message')?.value }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+}

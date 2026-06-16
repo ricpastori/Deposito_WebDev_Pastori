@@ -1,0 +1,10 @@
+<h1>Shopping list</h1>
+<app-additem-component></app-additem-component>
+<section class="shop-list">
+  @for (item of itemsList(); track item) {
+    <article class="item">
+      <h5>{{ item }}</h5>
+      <button type="button" class="outline contrast" (click)="removeItem(item)">&#x2715;</button>
+    </article>
+  }
+</section>

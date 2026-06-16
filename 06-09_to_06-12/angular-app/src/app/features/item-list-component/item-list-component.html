@@ -1,0 +1,11 @@
+<article>
+  <h1>Items list injection</h1>
+  <div class="grid">
+    <input type="text" [(ngModel)]="itemToAdd" />
+    <button type="button" (click)="addItem()">Aggiungi</button>
+  </div>
+
+  @for (item of items; track item) {
+    <p> {{ item }}</p>
+  }
+</article>

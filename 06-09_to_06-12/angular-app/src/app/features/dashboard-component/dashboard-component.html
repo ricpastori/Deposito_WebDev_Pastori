@@ -1,0 +1,32 @@
+<h3>Dashboard</h3>
+
+<button type="button" (click)="logout()">Logout</button>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dato</th>
+      <th>Valore</th>
+    </tr>
+  </thead>
+  <tbody>
+    @if (user; as u) {
+      <tr>
+        <td>Username</td>
+        <td>{{ u.username }}</td>
+      </tr>
+      <tr>
+        <td>Lingua browser</td>
+        <td>{{ u.language }}</td>
+      </tr>
+      <tr>
+        <td>Piattaforma</td>
+        <td>{{ u.platform }}</td>
+      </tr>
+      <tr>
+        <td>User agent</td>
+        <td>{{ u.userAgent }}</td>
+      </tr>
+    }
+  </tbody>
+</table>

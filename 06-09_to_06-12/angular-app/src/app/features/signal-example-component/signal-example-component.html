@@ -1,0 +1,19 @@
+<h2>Signal</h2>
+<p>Contatore: {{ counter() }}</p>
+<p>Nome: {{ name() }}</p>
+<button type="button" (click)="increment()">Aumenta</button>
+<button type="button" (click)="reset()">Reset</button>
+<button type="button" (click)="decrement()">Diminuisci</button>
+
+<h4>Computed</h4>
+<p>Double counter: {{ double() }}</p>
+<p>Saluto: {{ greetings() }}</p>
+
+<h4>Effect</h4>
+<input type="text" [value]="name()" (input)="updateName($event)">
+<p>Log (ultimi 5 cambiamenti)</p>
+<div>
+  @for(riga of logRighe; track riga) {
+    <p>{{ riga }}</p>
+  }
+</div>

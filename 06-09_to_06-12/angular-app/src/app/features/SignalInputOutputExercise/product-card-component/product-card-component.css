@@ -1,0 +1,19 @@
+span {
+  display: inline-block;
+  border-radius: 100px;
+  padding: 2px 8px;
+  color: white;
+  font-size: 0.75rem;
+}
+
+span.available {
+  background-color: lightseagreen;
+}
+
+span.unavailable {
+  background-color: lightcoral;
+}
+
+button {
+  width: 100%;
+}

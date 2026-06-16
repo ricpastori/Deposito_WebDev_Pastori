@@ -1,0 +1,23 @@
+.shop-list {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2rem;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+  width: 100%;
+  max-width: 320px;
+}
+
+.item h5 {
+  margin: 0;
+}
+
+.item button {
+  margin: 0;
+}

@@ -1,0 +1,10 @@
+<section class="grid">
+  <div class="box" [class.green]="color() === 'green'"></div>
+  <div class="box" [class.yellow]="color() === 'yellow'"></div>
+  <div class="box" [class.red]="color() === 'red'"></div>
+</section>
+<section>
+  <p>{{ status() }}</p>
+  <button type="button" (click)="changeStatus()">Cambia stato</button>
+</section>
+
